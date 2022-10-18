@@ -1,0 +1,122 @@
+ <!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piesi i kot</title>
+</head>
+<style> 
+    body{
+        display: inline;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 400%;
+    }
+
+    main{
+        padding: 1em;
+        position: absolute;
+        top: 30%;
+        left: 55%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+    }
+
+    h2{
+        font-size: 120%;
+        transition: 3s;
+        margin-bottom: -100px; 
+        margin-left: -60px;
+    }
+
+    p{
+        margin-top: -100px;
+        margin-left: -55px;
+    }
+
+    #i{
+        color: black;   
+    }
+
+    span{
+        color: ghostwhite;   
+    }
+
+    #ot2{
+        transition: 3s;
+        color: black;
+    }
+    
+    .dot{
+        transition: 3s;
+    }   
+    #co{
+        color: black;
+    }
+
+    #dog{
+        position: absolute;
+        left: 20px;
+        bottom: 0;
+    }
+
+    #kot{
+        position: absolute;
+        right: 20px;
+        bottom: 0;
+        opacity: 0.1;
+        transition: 3s;
+    }
+
+    #kot span{
+        color: black;
+    }
+</style>
+<body>
+    <main>
+        <h2 onmouseenter="emilEnter()" onmouseleave="emilLeave()">Emil</h2>
+        <h1 onmouseenter="piesikotEnter()" onmouseleave="piesikotLeave()" onmousedown="piesikotDown()" onmouseup="piesikotUp()" >Pies<span id="i">i</span class="kot">k<span id="ot1" class="kot">ot</span>
+        </h1>
+        <p><span id="ot2">ot</span><span class="dot">.</span><span id="co" onmouseenter="coEnter()" onmouseleave="coLeave()" >co</span>
+        </p>
+    </main>
+    <footer>
+        <img id="dog" src="src/e-Pies.svg" alt="e-Pies Logo">
+        <div id="kot" onmouseenter="piesikotEnter()" onmouseleave="piesikotLeave()">
+        <span id="text-cat">/ᐠ..ᐟ\</span>
+        </div>
+    </footer>
+
+<script>
+    function emilEnter(){
+        document.getElementById("i").style.margin = "0px 10px 0px 10px";
+        document.getElementById("i").style.transition = "3s";
+    }
+
+    function emilLeave(){
+        document.getElementById("i").style.margin = "0px 0px 0px 0px";
+        document.getElementById("i").style.transition = "3s";
+    }
+
+    function piesikotEnter(){
+        document.getElementsByTagName("h2")[0].style.color = "ghostwhite";
+        document.getElementById("ot2").style.color = "ghostwhite";
+        document.getElementsByClassName("dot")[0].style.color = "black";
+        document.getElementById("kot").style.opacity = "1.0";          
+        document.getElementById("i").style.transition = "3s";
+        document.getElementById("i").style.margin = "0px 10px 0px 10px";
+        document.getElementById("ot1").style.color = "black";
+        document.getElementById("ot1").style.transition = "3s";
+    }
+
+        function piesikotLeave(){
+        document.getElementsByTagName("h2")[0].style.color = "black";
+        document.getElementsByClassName("dot")[0].style.color = "ghostwhite";
+        document.getElementById("ot2").style.color = "black"; 
+        document.getElementById("kot").style.opacity = "0.1";
+        document.getElementById("i").style.margin = "0px 0px 0px 0px";
+        document.getElementById("ot1").style.color = "ghostwhite";
+    }       
+</script>
+</body>
+</html>
