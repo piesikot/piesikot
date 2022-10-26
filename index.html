@@ -7,6 +7,19 @@
     <title>Piesi i kot</title>
 </head>
 <style> 
+    
+    nav{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+
+
+    select{
+        background: white;
+        border: none;
+    }
+
     main{
         padding: 1em;
         position: absolute;
@@ -79,7 +92,7 @@
         color: black;
     }
     
-    @media only screen and (max-width: 450px) {
+    @media only screen and (max-width: 650px) {
         h1{
             font-size: 12vw;
             margin-top: -30px;
@@ -92,19 +105,6 @@
         p{
             font-size: 4vh;
         }
-    }
-    
-    @media only screen and (max-width: 650px) {
-        #dog{
-            width: 100px;
-            height: 140px;
-        }
-        #kot{
-            font-size:5vh;
-        }
-    }
-    
-    @media only screen and (max-width: 650px) {
         #dog{
             width: 100px;
             height: 140px;
@@ -114,8 +114,45 @@
         }
     }
 
+    @media only screen and (max-width: 450px) {
+        h1{
+            font-size: 18vw;
+            margin-top: -30px;
+            margin-bottom: -30px;
+        }
+        
+        h2{
+            font-size: 5vh;
+        }
+        p{
+            font-size: 4vh;
+        }
+    }
+
+    @media only screen and (max-width: 300px) {
+        h1{
+            font-size: 12vw;
+            margin-top: -30px;
+            margin-bottom: -30px;
+        }
+        
+        h2{
+            font-size: 3vh;
+        }
+        p{
+            font-size: 2vh;
+        }
+    }
+
 </style>
 <body>
+    <nav>
+        <div id="select">
+            <select name="Select cat">
+                <option>Text cat</option>
+            </select>
+        </div>
+    </nav>
     <main>
         <h2 onmouseenter="emilEnter()" onmouseleave="emilLeave()">Emil</h2>
         <h1 onmouseenter="piesikotEnter()" onmouseleave="piesikotLeave()" onmousedown="piesikotDown()" onmouseup="piesikotUp()" >Pies<span id="i">i</span class="kot">k<span id="ot1" class="kot">ot</span>
@@ -126,7 +163,7 @@
     <footer>
         <img id="dog" src="src/e-Pies.svg" alt="e-Pies Logo">
         <div id="kot" onmouseenter="piesikotEnter()" onmouseleave="piesikotLeave()">
-        <span id="text-cat">/ᐠ..ᐟ\</span>
+            <span id="text-cat">/ᐠ..ᐟ\</span>
         </div>
     </footer>
 
