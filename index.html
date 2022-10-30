@@ -7,6 +7,12 @@
     <title>Piesi i kot</title>
 </head>
 <style> 
+    #container{
+        display:flex; 
+        flex-direction:column; 
+        max-width: 100%;
+    }
+
     nav{
         position: absolute;
         top: 0px;
@@ -18,7 +24,7 @@
         border: none;
     }
 
-    main{
+    header{
         padding: 1em;
         position: absolute;
         top: 40%;
@@ -86,6 +92,18 @@
         font-family: Arial, Helvetica, sans-serif;
     }
 
+    #copyright{ 
+        color: black;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        padding: 5px;
+        text-align: center;
+        max-width: 60vw;
+        margin-left: 20vw;
+    }
+
     #text_cat{
         color: black;
     }
@@ -101,26 +119,40 @@
             display: none;
         }
         #dog{
-            height: 30vw;
+            height: 20vw;
         }
 
     }
 
     @media only screen and (max-height: 500px) {
         #dog{
-            height: 60vh;
+            height: 10vw;
         }
     }
 
     @media only screen and (max-width: 750px) {
         #dog{
-            height: 30vh;
+            height: 20vh;
         }
 
         #kot{
             font-size: 5vh;
         }
 
+        h1{
+            font-size: 15vh;
+        }
+
+        h2{
+            font-size: 10vh;
+        }
+
+        p{
+            font-size: 5vh ;
+        }
+    }
+
+    @media only screen and (max-width: 500px) {
         h1{
             font-size: 10vh;
         }
@@ -132,55 +164,64 @@
         p{
             font-size: 2.5vh ;
         }
+        #copyright{
+            display: none;
+        }
     }
-
-    @media only screen and (max-width: 500px) {
+    
+        @media only screen and (max-width: 300px) {
         h1{
-            font-size: 8vh;
+            font-size: 5vh;
         }
 
         h2{
-            font-size: 4vh;
+            font-size: 2.5vh;
         }
 
         p{
-            font-size: 2vh ;
+            font-size: 1.5vh ;
         }
     }
 </style>
 <body>
-    <nav>
-        <div id="select">
-            <select id="select-cat" name="select-cat" onChange="this.options[this.selectedIndex].onclick()">
-                <option id="text_cat" value="text_cat">Text cat</option>
-                <option id="invertocat" value="invertocat">Invertocat</option>
-            </select>
-        </div>
-    </nav>
-    <main>
-        <h2 onmouseenter="emilEnter()" onmouseleave="emilLeave()">Emil</h2>
-        <h1 onmouseenter="piesikotEnter()" onmouseleave="piesikotLeave()" onmousedown="piesikotDown()" onmouseup="piesikotUp()" >Pies<span id="i">i</span class="kot">k<span id="ot1" class="kot">ot</span>
-        </h1>
-        <p><span id="ot2">ot</span><span class="dot">.</span >co</span>
-        </p>
-    </main>
-    <footer>
-        <img id="dog" src="src/e-Pies.svg" alt="e-Pies Logo">
-        <div id="kot" onmouseenter="piesikotEnter()" onmouseleave="piesikotLeave()">
-            <div id="cat"><span id="text_cat">/ᐠ..ᐟ\</span></div>
-        </div>
-    </footer>
-
+    <div id="container">
+        <nav>
+            <div id="select">
+                <select id="select-cat" name="select-cat" onChange="this.options[this.selectedIndex].onclick()" autocomplete="off">
+                    <option id="text_cat" value="text_cat">Text cat</option>
+                    <option id="invertocat" value="invertocat">Invertocat</option>
+                </select>
+            </div>
+        </nav>
+        <header>
+            <h2 onmouseenter="emilEnter()" onmouseleave="emilLeave()">Emil</h2>
+            <h1 onmouseenter="piesikotEnter()" onmouseleave="piesikotLeave()" onmousedown="piesikotDown()" onmouseup="piesikotUp()" >Pies<span id="i">i</span class="kot">k<span id="ot1" class="kot">ot</span>
+            </h1>
+            <p><span id="ot2">ot</span><span class="dot">.</span >co</span>
+            </p>
+        </header>
+        <main>
+            <img id="dog" src="src/e-Pies.svg" alt="e-Pies Logo">
+            <div id="kot" onmouseenter="piesikotEnter()" onmouseleave="piesikotLeave()">
+                <div id="cat"><span id="text_cat">/ᐠ..ᐟ\</span></div>
+            </div>
+        </main>
+        <footer> 
+                <span id="copyright">Invertocat is GitHub logo and is used here only as social button to inform that project integrates with GitHub.</span>
+        </footer>
+    </div>
 <script>
     let select_text_cat = document.getElementById("text_cat");
     select_text_cat.onclick = function text_cat() {
     document.querySelector("#cat").innerHTML = '<span id="text_cat">/ᐠ..ᐟ\\</span>'
+    document.querySelector("#copyright").textContent = ""
     }    
 
     let select_invertocat = document.getElementById("invertocat");
     select_invertocat.onclick = function invertocat() {
                 alert("Invertocat is the logo of GitHub and is used here only as social button to inform that project integrates with GitHub." )
-                document.querySelector("#cat").innerHTML = '<div id="cat"><span id="github"> Invertocat is GitHub logo and is used here only as social button to inform that project integrates with GitHub.</span> <a href="https://github.com/piesikot" target="_blank"><img id="invertocat" src="src/Invertocat.png" alt="GitHub Logo"></a></div>'
+                document.querySelector("#cat").innerHTML = '<div id="cat"> <a href="https://github.com/piesikot" target="_blank"><img id="invertocat" src="src/Invertocat.png" alt="GitHub Logo"></a></div>'
+                document.querySelector("#copyright").textContent = "Invertocat is GitHub logo and is used here only as social button to inform that project integrates with GitHub."
     }
 
     function emilEnter(){
