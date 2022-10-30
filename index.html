@@ -76,6 +76,10 @@
         color: black;
     }
 
+    img{
+        font-size: 10px;
+    }
+
     #dog{
         position: absolute;
         left: 20px;
@@ -102,31 +106,35 @@
         text-align: center;
         max-width: 60vw;
         margin-left: 20vw;
+        opacity: 0.1;
+        transition: 3s;
     }
 
     #text_cat{
         color: black;
     }
 
-    #github{
-        color: black;
-        font-size: 14px;
-        margin-right: -15px;
+    #bongo{
+        width: 15vw;
     }
 
     @media only screen and (max-width: 1000px) {
         #github {
             display: none;
         }
+
         #dog{
             height: 20vw;
         }
-
     }
 
     @media only screen and (max-height: 500px) {
         #dog{
             height: 10vw;
+        }
+
+        #bongo{
+        width: 10vw;
         }
     }
 
@@ -168,7 +176,7 @@
             display: none;
         }
     }
-    
+
         @media only screen and (max-width: 300px) {
         h1{
             font-size: 5vh;
@@ -188,14 +196,15 @@
         <nav>
             <div id="select">
                 <select id="select-cat" name="select-cat" onChange="this.options[this.selectedIndex].onclick()" autocomplete="off">
-                    <option id="text_cat" value="text_cat">Text cat</option>
+                    <option id="bongo_cat" value="bongo_cat">Bongo Cat</option>
                     <option id="invertocat" value="invertocat">Invertocat</option>
+                    <option id="text_cat" value="text_cat">Text cat</option>
                 </select>
             </div>
         </nav>
         <header>
             <h2 onmouseenter="emilEnter()" onmouseleave="emilLeave()">Emil</h2>
-            <h1 onmouseenter="piesikotEnter()" onmouseleave="piesikotLeave()" onmousedown="piesikotDown()" onmouseup="piesikotUp()" >Pies<span id="i">i</span class="kot">k<span id="ot1" class="kot">ot</span>
+            <h1 onmouseenter="piesikotEnter()" onmouseleave="piesikotLeave()">Pies<span id="i">i</span class="kot">k<span id="ot1" class="kot">ot</span>
             </h1>
             <p><span id="ot2">ot</span><span class="dot">.</span >co</span>
             </p>
@@ -203,18 +212,18 @@
         <main>
             <img id="dog" src="src/e-Pies.svg" alt="e-Pies Logo">
             <div id="kot" onmouseenter="piesikotEnter()" onmouseleave="piesikotLeave()">
-                <div id="cat"><span id="text_cat">/ᐠ..ᐟ\</span></div>
+                <div id="cat"><img id="bongo" src="src/bongocat.gif" alt="Bongo Cat" onmouseenter="piesikotEnter()" onmouseleave="piesikotLeave()" onmousedown="bongocatDown()" onmouseup="bongocatUp()">
             </div>
         </main>
         <footer> 
-                <span id="copyright">Invertocat is GitHub logo and is used here only as social button to inform that project integrates with GitHub.</span>
+                <span id="copyright">Bongo Cat created by StrayRogue</span>
         </footer>
     </div>
 <script>
     let select_text_cat = document.getElementById("text_cat");
     select_text_cat.onclick = function text_cat() {
-    document.querySelector("#cat").innerHTML = '<span id="text_cat">/ᐠ..ᐟ\\</span>'
-    document.querySelector("#copyright").textContent = ""
+        document.querySelector("#cat").innerHTML = '<span id="text_cat">/ᐠ..ᐟ\\</span>'
+        document.querySelector("#copyright").textContent = ""
     }    
 
     let select_invertocat = document.getElementById("invertocat");
@@ -223,6 +232,12 @@
                 document.querySelector("#cat").innerHTML = '<div id="cat"> <a href="https://github.com/piesikot" target="_blank"><img id="invertocat" src="src/Invertocat.png" alt="GitHub Logo"></a></div>'
                 document.querySelector("#copyright").textContent = "Invertocat is GitHub logo and is used here only as social button to inform that project integrates with GitHub."
     }
+
+    let select_bongo_cat = document.getElementById("bongo_cat");
+    select_bongo_cat.onclick = function bongo_cat() {
+        document.querySelector("#cat").innerHTML = '<img id="bongo" src="src/bongocat.gif" alt="Bongo Cat" onmouseenter="piesikotEnter()" onmouseleave="piesikotLeave()" onmousedown="bongocatDown()" onmouseup="bongocatUp()">'
+        document.querySelector("#copyright").textContent = "Bongo Cat created by StrayRogue"
+    } 
 
     function emilEnter(){
         document.getElementById("i").style.margin = "0px 10px 0px 10px";
@@ -243,6 +258,7 @@
         document.getElementById("i").style.margin = "0px 10px 0px 10px";
         document.getElementById("ot1").style.color = "black";
         document.getElementById("ot1").style.transition = "3s";
+        document.getElementById("copyright").style.opacity = "1.0";   
     }
 
         function piesikotLeave(){
@@ -252,7 +268,16 @@
         document.getElementById("kot").style.opacity = "0.1";
         document.getElementById("i").style.margin = "0px 0px 0px 0px";
         document.getElementById("ot1").style.color = "ghostwhite";
-    }       
+        document.getElementById("copyright").style.opacity = "0.1";   
+    }     
+    
+        function bongocatDown(){ 
+            document.getElementById("bongo").src = "src/bongocat-lmb.gif"
+        }
+        
+        function bongocatUp(){
+            document.getElementById("bongo").src = "src/bongocat.gif"
+        }
     
 </script>
 </body>
