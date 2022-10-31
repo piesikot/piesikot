@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
     <title>Piesi i kot</title>
 </head>
 <style> 
+    body, html{
+        overflow: hidden;
+    }
+    
     #container{
         display:flex; 
-        flex-direction:column; 
-        max-width: 100%;
+        flex-direction:column;
+        overflow-x: hidden;
     }
 
     nav{
@@ -118,6 +122,12 @@
         width: 15vw;
     }
 
+    #stitch{
+        margin-bottom: -14px;
+        margin-right: -100px;
+        overflow: hidden;
+    }
+
     @media only screen and (max-width: 1000px) {
         #github {
             display: none;
@@ -145,6 +155,10 @@
 
         #kot{
             font-size: 5vh;
+        }
+
+        #stitch{
+            width: 30vh;
         }
 
         h1{
@@ -196,6 +210,7 @@
         <nav>
             <div id="select">
                 <select id="select-cat" name="select-cat" onChange="this.options[this.selectedIndex].onclick()" autocomplete="off">
+                    <option id="disneys_stitch" value="disneys_stitch">Disney's Stitch</option>
                     <option id="bongo_cat" value="bongo_cat">Bongo Cat</option>
                     <option id="invertocat" value="invertocat">Invertocat</option>
                     <option id="text_cat" value="text_cat">Text cat</option>
@@ -212,11 +227,11 @@
         <main>
             <img id="dog" src="src/e-Pies.svg" alt="e-Pies Logo">
             <div id="kot" onmouseenter="piesikotEnter()" onmouseleave="piesikotLeave()">
-                <div id="cat"><img id="bongo" src="src/bongocat.gif" alt="Bongo Cat" onmouseenter="piesikotEnter()" onmouseleave="piesikotLeave()" onmousedown="bongocatDown()" onmouseup="bongocatUp()" ontouchstart="bongocatDown()">
+                <div id="cat"><img id="stitch" src="src/stitch.gif" alt="Disney's Stitch" onmouseenter="piesikotEnter()" onmouseleave="piesikotLeave()" onmousedown="bongocatDown()" onmouseup="bongocatUp()" ontouchstart="bongocatDown()" onclick="stitchClick()">
             </div>
         </main>
         <footer> 
-                <span id="copyright">Bongo Cat created by StrayRogue</span>
+                <span id="copyright">Stitch is a character in Disney's Lilo & Stitch franchise.</span>
         </footer>
     </div>
 <script>
@@ -228,16 +243,23 @@
 
     let select_invertocat = document.getElementById("invertocat");
     select_invertocat.onclick = function invertocat() {
-                alert("Invertocat's GitHub logo used here only as social button to inform that this project integrates with GitHub." )
+                alert("Invertocat is GitHub logo used here only as social button to inform that this project integrates with GitHub." )
                 document.querySelector("#cat").innerHTML = '<div id="cat"> <a href="https://github.com/piesikot" target="_blank"><img id="invertocat" src="src/Invertocat.png" alt="GitHub Logo"></a></div>'
-                document.querySelector("#copyright").textContent = "Invertocat's GitHub logo used here only as social button to inform that this project integrates with GitHub."
+                document.querySelector("#copyright").textContent = "Invertocat is GitHub logo used here only as social button to inform that this project integrates with GitHub."
     }
 
     let select_bongo_cat = document.getElementById("bongo_cat");
     select_bongo_cat.onclick = function bongo_cat() {
         alert("Bongo Cat created by StrayRogue" )
-        document.querySelector("#cat").innerHTML = '<img id="bongo" src="src/bongocat.gif" alt="Bongo Cat" onmouseenter="piesikotEnter()" onmouseleave="piesikotLeave()" onmousedown="bongocatDown()" onmouseup="bongocatUp()">'
-        document.querySelector("#copyright").textContent = "Bongo Cat created by StrayRogue"
+        document.querySelector("#cat").innerHTML = '<img id="bongo" src="src/bongocat.gif" alt="Bongo Cat" onmouseenter="piesikotEnter()" onmouseleave="piesikotLeave()" onmousedown="bongocatDown()" onmouseup="bongocatUp()" ontouchstart="bongocatDown()">'
+        document.querySelector("#copyright").textContent = "Bongo Cat created by StrayRogue."
+    } 
+
+    let select_disneys_stitch = document.getElementById("disneys_stitch");
+    select_disneys_stitch.onclick = function disneys_stitch() {
+        alert("Stitch is a character in Disney's Lilo & Stitch franchise." )
+        document.querySelector("#cat").innerHTML = `<img id="stitch" src="src/stitch.gif" alt="Disney's Stitch" onmouseenter="piesikotEnter()" onmouseleave="piesikotLeave()" onmousedown="bongocatDown()" onmouseup="bongocatUp()" ontouchstart="bongocatDown()" onclick="stitchClick()">` ;
+        document.querySelector("#copyright").textContent = "Stitch is a character in Disney's Lilo & Stitch franchise."
     } 
 
     function emilEnter(){
@@ -269,15 +291,19 @@
         document.getElementById("kot").style.opacity = "0.1";
         document.getElementById("i").style.margin = "0px 0px 0px 0px";
         document.getElementById("ot1").style.color = "ghostwhite";
-        document.getElementById("copyright").style.opacity = "0.1";   
+        document.getElementById("copyright").style.opacity = "0.1";
     }     
     
         function bongocatDown(){ 
-            document.getElementById("bongo").src = "src/bongocat-lmb.gif"
+            document.getElementById("bongo").src = "src/bongocat-lmb.gif";
         }
         
         function bongocatUp(){
             document.getElementById("bongo").src = "src/bongocat.gif"
+        }
+
+        function stitchClick(){ 
+            document.getElementById("stitch").src = "src/stitch-run.gif";
         }
     
 </script>
