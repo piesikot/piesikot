@@ -212,7 +212,7 @@
         <main>
             <img id="dog" src="src/e-Pies.svg" alt="e-Pies Logo">
             <div id="kot" onmouseenter="piesikotEnter()" onmouseleave="piesikotLeave()">
-                <div id="cat"><img id="bongo" src="src/bongocat.gif" alt="Bongo Cat" onmouseenter="piesikotEnter()" onmouseleave="piesikotLeave()" onmousedown="bongocatDown()" onmouseup="bongocatUp()">
+                <div id="cat"><img id="bongo" src="src/bongocat.gif" alt="Bongo Cat" onmouseenter="piesikotEnter()" onmouseleave="piesikotLeave()" onmousedown="bongocatDown()" onmouseup="bongocatUp()" ontouchstart="bongocatDown()">
             </div>
         </main>
         <footer> 
@@ -228,13 +228,14 @@
 
     let select_invertocat = document.getElementById("invertocat");
     select_invertocat.onclick = function invertocat() {
-                alert("Invertocat is the logo of GitHub and is used here only as social button to inform that project integrates with GitHub." )
+                alert("Invertocat's GitHub logo used here only as social button to inform that this project integrates with GitHub." )
                 document.querySelector("#cat").innerHTML = '<div id="cat"> <a href="https://github.com/piesikot" target="_blank"><img id="invertocat" src="src/Invertocat.png" alt="GitHub Logo"></a></div>'
-                document.querySelector("#copyright").textContent = "Invertocat is GitHub logo and is used here only as social button to inform that project integrates with GitHub."
+                document.querySelector("#copyright").textContent = "Invertocat's GitHub logo used here only as social button to inform that this project integrates with GitHub."
     }
 
     let select_bongo_cat = document.getElementById("bongo_cat");
     select_bongo_cat.onclick = function bongo_cat() {
+        alert("Bongo Cat created by StrayRogue" )
         document.querySelector("#cat").innerHTML = '<img id="bongo" src="src/bongocat.gif" alt="Bongo Cat" onmouseenter="piesikotEnter()" onmouseleave="piesikotLeave()" onmousedown="bongocatDown()" onmouseup="bongocatUp()">'
         document.querySelector("#copyright").textContent = "Bongo Cat created by StrayRogue"
     } 
