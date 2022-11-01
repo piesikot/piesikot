@@ -276,6 +276,7 @@
     select_text_cat.onclick = function text_cat() {
         document.querySelector("#cat").innerHTML = '<span id="text_cat">/ᐠ..ᐟ\\</span>'
         document.querySelector("#copyright").textContent = ""
+        document.querySelector("#copyright").style.transition = "3s"
     }    
 
     let select_invertocat = document.getElementById("invertocat");
@@ -283,13 +284,15 @@
                 alert("Invertocat is GitHub logo used here only as social button to inform that this project integrates with GitHub." )
                 document.querySelector("#cat").innerHTML = '<div id="cat"> <a href="https://github.com/piesikot" target="_blank"><img id="invertocat" src="src/Invertocat.png" alt="GitHub Logo"></a></div>'
                 document.querySelector("#copyright").textContent = "Invertocat is GitHub logo used here only as social button to inform that this project integrates with GitHub."
+                document.querySelector("#copyright").style.transition = "3s"
     }
 
     let select_bongo_cat = document.getElementById("bongo_cat");
     select_bongo_cat.onclick = function bongo_cat() {
-        alert("Bongo Cat created by StrayRogue" )
+        alert("Bongo Cat created by StrayRogue." )
         document.querySelector("#cat").innerHTML = '<img id="bongo" src="src/bongocat.gif" alt="Bongo Cat" onmouseenter="piesikotEnter()" onmouseleave="piesikotLeave()" onmousedown="bongocatDown()" onmouseup="bongocatUp()" ontouchstart="bongocatDown()">'
         document.querySelector("#copyright").textContent = "Bongo Cat created by StrayRogue."
+        document.querySelector("#copyright").style.transition = "3s"
     } 
 
     let select_disneys_stitch = document.getElementById("disneys_stitch");
@@ -297,6 +300,7 @@
         alert("Stitch is a character in Disney's Lilo & Stitch franchise." )
         document.querySelector("#cat").innerHTML = `<img id="stitch" src="src/stitch.gif" alt="Disney's Stitch" onmouseenter="piesikotEnter()" onmouseleave="piesikotLeave()" onmousedown="bongocatDown()" onmouseup="bongocatUp()" ontouchstart="bongocatDown()" onclick="stitchClick()">` ;
         document.querySelector("#copyright").textContent = "Stitch is a character in Disney's Lilo & Stitch franchise."
+        document.querySelector("#copyright").style.transition = "3s"
     } 
 
     let select_nyan_cat = document.getElementById("nyan_cat");
@@ -325,7 +329,8 @@
         document.getElementById("i").style.margin = "0px 10px 0px 10px";
         document.getElementById("ot1").style.color = "black";
         document.getElementById("ot1").style.transition = "3s";
-        document.getElementById("copyright").style.opacity = "1.0";   
+        document.getElementById("copyright").style.opacity = "1.0"; 
+        document.querySelector("#copyright").style.transition = "3s"
     }
 
         function piesikotLeave(){
@@ -352,19 +357,19 @@
 
         function nyancatEnter(){    
             document.querySelector("body").style.background = "black"
-            document.querySelector("body").style.transition = "5s"
+            document.querySelector("body").style.transition = "4s"
             document.querySelector("#copyright").style.color = "white"
-            document.querySelector("#copyright").style.transition = "5s"
+            document.querySelector("#copyright").style.transition = "4s"
             document.querySelector("p").style.color = "black"
             document.querySelector("h2").style.color = "black"
-            document.querySelector("h2").style.transition = "5s"
+            document.querySelector("h2").style.transition = "4s"
             document.querySelector("p").style.color = "black"
-            document.querySelector("p").style.transition = "5s"
+            document.querySelector("p").style.transition = "4s"
             document.querySelector("#ot2").style.color = "black"
-            document.querySelector("#ot2").style.transition = "5s"
+            document.querySelector("#ot2").style.transition = "4s"
 
             document.querySelector("select").style.background = "black"
-            document.querySelector("select").style.transition = "5s"
+            document.querySelector("select").style.transition = "4s"
 
             var audio = document.getElementById("myAudio");
                            function playAudio() {
