@@ -23,10 +23,12 @@
         left: 0px;
     }
 
+
     select{
         background: white;
         border: none;
     }
+    
 
     header{
         padding: 1em;
@@ -63,7 +65,7 @@
         color: black;   
     }
 
-    span{
+    #ot1{
         color: ghostwhite;   
     }
     
@@ -128,6 +130,13 @@
         overflow: hidden;
     }
 
+    #nyan{
+        margin-right: -20px;
+        
+        width: 20vw;
+        float: left;
+    }
+
     @media only screen and (max-width: 1000px) {
         #github {
             display: none;
@@ -135,6 +144,11 @@
 
         #dog{
             height: 20vw;
+        }
+        
+        #stitch{
+            width: 200px;
+            margin-left: -20vw;
         }
     }
 
@@ -145,6 +159,11 @@
 
         #bongo{
         width: 10vw;
+        }
+
+        #stitch{
+            width: 200px;
+            margin-left: -15vw;
         }
     }
 
@@ -158,7 +177,12 @@
         }
 
         #stitch{
-            width: 30vh;
+            width: 200px;
+            margin-left: -20vw;
+        }
+
+        #nyan{
+            margin-bottom: -20px;
         }
 
         h1{
@@ -174,7 +198,7 @@
         }
     }
 
-    @media only screen and (max-width: 500px) {
+    @media only screen and (max-width: 550px) {
         h1{
             font-size: 10vh;
         }
@@ -188,6 +212,10 @@
         }
         #copyright{
             display: none;
+        }
+
+        #stitch{
+            margin-left: -30vw;
         }
     }
 
@@ -203,23 +231,27 @@
         p{
             font-size: 1.5vh ;
         }
+
+        #stitch{
+            margin-left: -45vw;
+        }
+
     }
 </style>
 <body>
     <div id="container">
         <nav>
-            <div id="select">
                 <select id="select-cat" name="select-cat" onChange="this.options[this.selectedIndex].onclick()" autocomplete="off">
+                    <option id="nyan_cat" value="nyan_cat">Nyan Cat</option>
                     <option id="disneys_stitch" value="disneys_stitch">Disney's Stitch</option>
                     <option id="bongo_cat" value="bongo_cat">Bongo Cat</option>
                     <option id="invertocat" value="invertocat">Invertocat</option>
                     <option id="text_cat" value="text_cat">Text cat</option>
                 </select>
-            </div>
         </nav>
         <header>
             <h2 onmouseenter="emilEnter()" onmouseleave="emilLeave()">Emil</h2>
-            <h1 onmouseenter="piesikotEnter()" onmouseleave="piesikotLeave()">Pies<span id="i">i</span class="kot">k<span id="ot1" class="kot">ot</span>
+            <h1 onmouseenter="piesikotEnter()" onmouseleave="piesikotLeave()">Pies<span id="i">i</span><span class="kot">k<span id="ot1" class="kot">ot</span></span> 
             </h1>
             <p><span id="ot2">ot</span><span class="dot">.</span >co</span>
             </p>
@@ -227,14 +259,19 @@
         <main>
             <img id="dog" src="src/e-Pies.svg" alt="e-Pies Logo">
             <div id="kot" onmouseenter="piesikotEnter()" onmouseleave="piesikotLeave()">
-                <div id="cat"><img id="stitch" src="src/stitch.gif" alt="Disney's Stitch" onmouseenter="piesikotEnter()" onmouseleave="piesikotLeave()" onmousedown="bongocatDown()" onmouseup="bongocatUp()" ontouchstart="bongocatDown()" onclick="stitchClick()">
+                <div id="cat">
+                    <img id="nyan" src="src/nyancat.gif" alt="Nyan Cat"  onmousedown="bongocatDown()" onmouseup="bongocatUp()" ontouchstart="bongocatDown()" onclick="stitchClick()" onmouseenter="nyancatEnter()" onmouseleave="nyancatLeave()">
             </div>
         </main>
         <footer> 
-                <span id="copyright">Stitch is a character in Disney's Lilo & Stitch franchise.</span>
+                <span id="copyright">Nyan Cat created by Christopher Torres.</span>
         </footer>
     </div>
+<audio id="myAudio">
+        <source src="src/nyanaudio.mp3" type="audio/mpeg">
+    </audio>
 <script>
+
     let select_text_cat = document.getElementById("text_cat");
     select_text_cat.onclick = function text_cat() {
         document.querySelector("#cat").innerHTML = '<span id="text_cat">/ᐠ..ᐟ\\</span>'
@@ -260,6 +297,13 @@
         alert("Stitch is a character in Disney's Lilo & Stitch franchise." )
         document.querySelector("#cat").innerHTML = `<img id="stitch" src="src/stitch.gif" alt="Disney's Stitch" onmouseenter="piesikotEnter()" onmouseleave="piesikotLeave()" onmousedown="bongocatDown()" onmouseup="bongocatUp()" ontouchstart="bongocatDown()" onclick="stitchClick()">` ;
         document.querySelector("#copyright").textContent = "Stitch is a character in Disney's Lilo & Stitch franchise."
+    } 
+
+    let select_nyan_cat = document.getElementById("nyan_cat");
+    select_nyan_cat.onclick = function nyan_cat() {
+        alert("Nyan Cat created by Christopher Torres." )
+        document.querySelector("#cat").innerHTML = `<img id="nyan" src="src/nyancat.gif" alt="Nyan Cat"  onmousedown="bongocatDown()" onmouseup="bongocatUp()" ontouchstart="bongocatDown()" onclick="stitchClick()" onmouseenter="nyancatEnter()" onmouseleave="nyancatLeave()">` ;
+        document.querySelector("#copyright").textContent = "Nyan Cat created by Christopher Torres."
     } 
 
     function emilEnter(){
@@ -305,6 +349,80 @@
         function stitchClick(){ 
             document.getElementById("stitch").src = "src/stitch-run.gif";
         }
+
+        function nyancatEnter(){    
+            document.querySelector("body").style.background = "black"
+            document.querySelector("body").style.transition = "5s"
+            document.querySelector("#copyright").style.color = "white"
+            document.querySelector("#copyright").style.transition = "5s"
+            document.querySelector("p").style.color = "black"
+            document.querySelector("h2").style.color = "black"
+            document.querySelector("h2").style.transition = "5s"
+            document.querySelector("p").style.color = "black"
+            document.querySelector("p").style.transition = "5s"
+            document.querySelector("#ot2").style.color = "black"
+            document.querySelector("#ot2").style.transition = "5s"
+
+            document.querySelector("select").style.background = "black"
+            document.querySelector("select").style.transition = "5s"
+
+            var audio = document.getElementById("myAudio");
+                           function playAudio() {
+                           audio.play();
+                           }
+                           playAudio();
+
+            //TBC   
+            /*            let player = "ON"
+
+            if (player == "ON") {
+                document.querySelector("body").style.transition = "0s"
+                document.querySelector("#copyright").style.transition = "0s"
+                document.querySelector("h2").style.transition = "0s"
+                document.querySelector("p").style.transition = "0s"
+                document.querySelector("#ot2").style.transition = "0s"
+            }
+            */
+
+        // TBC
+        /*
+            document.querySelector(".kot").innerText = "Nyan"
+            document.querySelector(".kot").style.transition = "4s"
+
+            document.querySelector(".kot").style.color = "white"
+            document.querySelector(".kot").style.transition = "4s"
+            document.querySelector(".kot span").style.color = "white"
+            document.querySelector(".kot span").style.transition = "4s"
+
+            document.querySelector("h1").style.color = "white"
+            document.querySelector("h1").style.transition = "4s"
+
+            document.querySelector("#i").style.color = "white"
+            document.querySelector("#i").style.transition = "4s"
+
+            document.querySelector("#dog").style.fill = "white"
+            document.querySelector("#dog").style.transition = "4s"
+        */
+        }
+
+        function nyancatLeave(){
+            document.querySelector("body").style.background = "white"
+            document.querySelector("body").style.transition = "0s"
+
+            document.querySelector("#copyright").style.color = "black"
+            document.querySelector("#copyright").style.transition = "0s"
+
+            document.querySelector("select").style.background = "white"
+            document.querySelector("select").style.transition = "0s"
+
+            var audio = document.getElementById("myAudio");
+                           function playAudio() {
+                           audio.pause();
+                           }
+                           playAudio();
+
+        }
+        
     
 </script>
 </body>
