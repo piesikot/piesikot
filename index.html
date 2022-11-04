@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0">
-    <title>Piesi i kot</title>
+    <title>Pies i kot</title>
 </head>
 <style> 
     body, html{
@@ -322,6 +322,8 @@
 
         function piesikotEnter(){
         document.getElementsByTagName("h2")[0].style.color = "ghostwhite";
+        document.querySelector("h2").style.transition = "3s"
+
         document.getElementById("ot2").style.color = "ghostwhite";
         document.getElementsByClassName("dot")[0].style.color = "black";
         document.getElementById("kot").style.opacity = "1.0";          
@@ -355,7 +357,7 @@
             document.getElementById("stitch").src = "src/stitch-run.gif";
         }
 
-        function nyancatEnter(){    
+        function nyancatEnter(){
             document.querySelector("body").style.background = "black"
             document.querySelector("body").style.transition = "4s"
             document.querySelector("#copyright").style.color = "white"
@@ -377,19 +379,27 @@
                            }
                            playAudio();
 
-            //TBC   
-            /*            let player = "ON"
+            
+            /*               
+            async function timeFunction() {
+            setInterval(function(){ x() }, 2000);
+            }
+            console.log(nyanInAction);
 
-            if (player == "ON") {
+            if (nyanInAction == "ON") {
                 document.querySelector("body").style.transition = "0s"
                 document.querySelector("#copyright").style.transition = "0s"
                 document.querySelector("h2").style.transition = "0s"
                 document.querySelector("p").style.transition = "0s"
-                document.querySelector("#ot2").style.transition = "0s"
-            }
+                
+                document.querySelector(".kot").style.transition = "0s"
+                document.querySelector(".kot").style.color = "black"
+            };
+        
             */
 
-        // TBC
+
+        //TBC
         /*
             document.querySelector(".kot").innerText = "Nyan"
             document.querySelector(".kot").style.transition = "4s"
