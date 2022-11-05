@@ -242,11 +242,11 @@
     <div id="container">
         <nav>
                 <select id="select-cat" name="select-cat" onChange="this.options[this.selectedIndex].onclick()" autocomplete="off">
-                    <option id="nyan_cat" value="nyan_cat">Nyan Cat</option>
-                    <option id="disneys_stitch" value="disneys_stitch">Disney's Stitch</option>
-                    <option id="bongo_cat" value="bongo_cat">Bongo Cat</option>
+                    <option id="text_cat" value="text_cat" >Text cat</option>
                     <option id="invertocat" value="invertocat">Invertocat</option>
-                    <option id="text_cat" value="text_cat">Text cat</option>
+                    <option id="bongo_cat" value="bongo_cat">Bongo Cat</option>
+                    <option id="disneys_stitch" value="disneys_stitch">Disney's Stitch</option>
+                    <option id="nyan_cat" value="nyan_cat">Nyan Cat</option>
                 </select>
         </nav>
         <header>
@@ -260,11 +260,11 @@
             <img id="dog" src="src/e-Pies.svg" alt="e-Pies Logo">
             <div id="kot" onmouseenter="piesikotEnter()" onmouseleave="piesikotLeave()">
                 <div id="cat">
-                    <img id="nyan" src="src/nyancat.gif" alt="Nyan Cat"  onmousedown="bongocatDown()" onmouseup="bongocatUp()" ontouchstart="bongocatDown()" onclick="stitchClick()" onmouseenter="nyancatEnter()" onmouseleave="nyancatLeave()">
+                    <span id="text_cat">/ᐠ..ᐟ\</span>
             </div>
         </main>
         <footer> 
-                <span id="copyright">Nyan Cat created by Christopher Torres.</span>
+                <span id="copyright">Just cat made from text.</span>
         </footer>
     </div>
 <audio id="myAudio">
@@ -272,11 +272,14 @@
     </audio>
 <script>
 
+
+
     let select_text_cat = document.getElementById("text_cat");
     select_text_cat.onclick = function text_cat() {
         document.querySelector("#cat").innerHTML = '<span id="text_cat">/ᐠ..ᐟ\\</span>'
-        document.querySelector("#copyright").textContent = ""
+        document.querySelector("#copyright").textContent = "Just cat made from text."
         document.querySelector("#copyright").style.transition = "3s"
+        nyanInAction = false
     }    
 
     let select_invertocat = document.getElementById("invertocat");
@@ -285,6 +288,7 @@
                 document.querySelector("#cat").innerHTML = '<div id="cat"> <a href="https://github.com/piesikot" target="_blank"><img id="invertocat" src="src/Invertocat.png" alt="GitHub Logo"></a></div>'
                 document.querySelector("#copyright").textContent = "Invertocat is GitHub logo used here only as social button to inform that this project integrates with GitHub."
                 document.querySelector("#copyright").style.transition = "3s"
+                nyanInAction = false
     }
 
     let select_bongo_cat = document.getElementById("bongo_cat");
@@ -293,20 +297,22 @@
         document.querySelector("#cat").innerHTML = '<img id="bongo" src="src/bongocat.gif" alt="Bongo Cat" onmouseenter="piesikotEnter()" onmouseleave="piesikotLeave()" onmousedown="bongocatDown()" onmouseup="bongocatUp()" ontouchstart="bongocatDown()">'
         document.querySelector("#copyright").textContent = "Bongo Cat created by StrayRogue."
         document.querySelector("#copyright").style.transition = "3s"
+        nyanInAction = false
     } 
 
     let select_disneys_stitch = document.getElementById("disneys_stitch");
     select_disneys_stitch.onclick = function disneys_stitch() {
         alert("Stitch is a character in Disney's Lilo & Stitch franchise." )
-        document.querySelector("#cat").innerHTML = `<img id="stitch" src="src/stitch.gif" alt="Disney's Stitch" onmouseenter="piesikotEnter()" onmouseleave="piesikotLeave()" onmousedown="bongocatDown()" onmouseup="bongocatUp()" ontouchstart="bongocatDown()" onclick="stitchClick()">` ;
+        document.querySelector("#cat").innerHTML = `<img id="stitch" src="src/stitch.gif" alt="Disney's Stitch" onmouseenter="piesikotEnter()" onmouseleave="piesikotLeave()" onclick="stitchClick()">` ;
         document.querySelector("#copyright").textContent = "Stitch is a character in Disney's Lilo & Stitch franchise."
         document.querySelector("#copyright").style.transition = "3s"
+        nyanInAction = false
     } 
 
     let select_nyan_cat = document.getElementById("nyan_cat");
     select_nyan_cat.onclick = function nyan_cat() {
         alert("Nyan Cat created by Christopher Torres." )
-        document.querySelector("#cat").innerHTML = `<img id="nyan" src="src/nyancat.gif" alt="Nyan Cat"  onmousedown="bongocatDown()" onmouseup="bongocatUp()" ontouchstart="bongocatDown()" onclick="stitchClick()" onmouseenter="nyancatEnter()" onmouseleave="nyancatLeave()">` ;
+        document.querySelector("#cat").innerHTML = `<img id="nyan" src="src/nyancat.gif" alt="Nyan Cat" onmouseenter="nyancatEnter()" onmouseleave="nyancatLeave()">` ;
         document.querySelector("#copyright").textContent = "Nyan Cat created by Christopher Torres."
     } 
 
@@ -358,6 +364,7 @@
         }
 
         function nyancatEnter(){
+
             document.querySelector("body").style.background = "black"
             document.querySelector("body").style.transition = "4s"
             document.querySelector("#copyright").style.color = "white"
@@ -380,13 +387,14 @@
                            playAudio();
 
             
-            /*               
-            async function timeFunction() {
-            setInterval(function(){ x() }, 2000);
-            }
-            console.log(nyanInAction);
+                          
+var myTimeout = setTimeout(nyanStart, 4000);
 
-            if (nyanInAction == "ON") {
+function nyanStart() {
+    nyanInAction = true
+}
+
+            if (nyanInAction == true) {
                 document.querySelector("body").style.transition = "0s"
                 document.querySelector("#copyright").style.transition = "0s"
                 document.querySelector("h2").style.transition = "0s"
@@ -396,28 +404,9 @@
                 document.querySelector(".kot").style.color = "black"
             };
         
-            */
+            
 
 
-        //TBC
-        /*
-            document.querySelector(".kot").innerText = "Nyan"
-            document.querySelector(".kot").style.transition = "4s"
-
-            document.querySelector(".kot").style.color = "white"
-            document.querySelector(".kot").style.transition = "4s"
-            document.querySelector(".kot span").style.color = "white"
-            document.querySelector(".kot span").style.transition = "4s"
-
-            document.querySelector("h1").style.color = "white"
-            document.querySelector("h1").style.transition = "4s"
-
-            document.querySelector("#i").style.color = "white"
-            document.querySelector("#i").style.transition = "4s"
-
-            document.querySelector("#dog").style.fill = "white"
-            document.querySelector("#dog").style.transition = "4s"
-        */
         }
 
         function nyancatLeave(){
