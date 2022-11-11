@@ -17,10 +17,15 @@
         overflow-x: hidden;
     }
 
-    nav{
+    #nav-cats{
         position: absolute;
         top: 0px;
         left: 0px;
+    }
+    #nav-projects{
+        position: absolute;
+        top: 0px;
+        right: 0px;
     }
 
 
@@ -240,7 +245,7 @@
 </style>
 <body>
     <div id="container">
-        <nav>
+        <nav id="nav-cats">
                 <select id="select-cat" name="select-cat" onChange="this.options[this.selectedIndex].onclick()" autocomplete="off">
                     <option id="text_cat" value="text_cat" >Text cat</option>
                     <option id="invertocat" value="invertocat">Invertocat</option>
@@ -249,6 +254,13 @@
                     <option id="nyan_cat" value="nyan_cat">Nyan Cat</option>
                 </select>
         </nav>
+        <nav id="nav-projects">
+            <select id="select-project" name="select-project" onchange="location = this.value" autocomplete="off">
+                <option id="projects" value="projects" autofocus disabled selected >Projects</option>
+                ><option id="pIestagram" value="../pIestagram/pIestagram.html">pIestagram</option>
+
+            </select>
+    </nav>
         <header>
             <h2 onmouseenter="emilEnter()" onmouseleave="emilLeave()">Emil</h2>
             <h1 onmouseenter="piesikotEnter()" onmouseleave="piesikotLeave()">Pies<span id="i">i</span><span class="kot">k<span id="ot1" class="kot">ot</span></span> 
