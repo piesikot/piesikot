@@ -22,10 +22,21 @@
         top: 0px;
         left: 0px;
     }
+     #select-cat{
+        width: 90px;
+    }
     #nav-projects{
         position: absolute;
         top: 0px;
         right: 0px;
+          
+    }
+    #select-project{
+        font-size: 31px;
+        width: 140px;
+    }
+    select #select-projects {
+        width: 100px;
     }
 
 
@@ -247,6 +258,7 @@
     <div id="container">
         <nav id="nav-cats">
                 <select id="select-cat" name="select-cat" onChange="this.options[this.selectedIndex].onclick()" autocomplete="off">
+                    <option id="change-cat" value="changecat" autofocus disabled selected >Change cat</option>
                     <option id="text_cat" value="text_cat" >Text cat</option>
                     <option id="invertocat" value="invertocat">Invertocat</option>
                     <option id="bongo_cat" value="bongo_cat">Bongo Cat</option>
@@ -257,7 +269,7 @@
         <nav id="nav-projects">
             <select id="select-project" name="select-project" onchange="location = this.value" autocomplete="off">
                 <option id="projects" value="projects" autofocus disabled selected >Projects</option>
-                ><option id="pIestagram" value="../pIestagram/pIestagram.html">pIestagram</option>
+                <option id="pIestagram" value="../pIestagram/pIestagram.html">pIestagram</option>
 
             </select>
     </nav>
