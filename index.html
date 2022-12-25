@@ -401,9 +401,19 @@
             document.querySelector("#ot2").style.color = "black"
             document.querySelector("#ot2").style.transition = "4s"
 
-            document.querySelector("select").style.background = "black"
-            document.querySelector("select").style.transition = "4s"
+            //document.querySelectorAll("select").style.background = "black"
+            //document.querySelectorAll("select").style.transition = "4s"
 
+                let changeSelects = document.querySelectorAll('select')//, i;
+                for (i = 0; i < changeSelects.length; ++i) {
+                    changeSelects[i].style.background = "black";
+                }
+
+                let changeSelectsTransition = document.querySelectorAll('select')//, i;
+                for (i2 = 0; i2 < changeSelects.length; ++i2) {
+                    changeSelectsTransition[i2].style.transition = "4s";
+                }
+                
             var audio = document.getElementById("myAudio");
                            function playAudio() {
                            audio.play();
@@ -426,6 +436,16 @@ function nyanStart() {
                 
                 document.querySelector(".kot").style.transition = "0s"
                 document.querySelector(".kot").style.color = "black"
+
+                                let changeSelects = document.querySelectorAll('select')//, i;
+                for (i = 0; i < changeSelects.length; ++i) {
+                    changeSelects[i].style.background = "black";
+                }
+
+                let changeSelectsTransition = document.querySelectorAll('select')//, i;
+                for (i2 = 0; i2 < changeSelects.length; ++i2) {
+                    changeSelectsTransition[i2].style.transition = "0s";
+                }
             };
         
             
@@ -440,8 +460,18 @@ function nyanStart() {
             document.querySelector("#copyright").style.color = "black"
             document.querySelector("#copyright").style.transition = "0s"
 
-            document.querySelector("select").style.background = "white"
-            document.querySelector("select").style.transition = "0s"
+            //document.querySelector("select").style.background = "white"
+            //document.querySelector("select").style.transition = "0s"
+
+            let changeSelects = document.querySelectorAll('select')//, i;
+            for (i = 0; i < changeSelects.length; ++i) {
+                changeSelects[i].style.background = "white";
+            }
+
+            let changeSelectsTransition = document.querySelectorAll('select')//, i;
+            for (i2 = 0; i2 < changeSelects.length; ++i2) {
+                changeSelectsTransition[i2].style.transition = "0s";
+            }
 
             var audio = document.getElementById("myAudio");
                            function playAudio() {
