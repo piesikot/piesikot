@@ -306,36 +306,48 @@
         nyanInAction = false
     }    
 
+    document.getElementById("invertocat").addEventListener("click", invertocatAlert);
+    function invertocatAlert() {
+        alert("Invertocat is GitHub logo used here only as social button to inform that this project integrates with GitHub." )
+    }
     let select_invertocat = document.getElementById("invertocat");
     select_invertocat.onclick = function invertocat() {
-                alert("Invertocat is GitHub logo used here only as social button to inform that this project integrates with GitHub." )
                 document.querySelector("#cat").innerHTML = '<div id="cat"> <a href="https://github.com/piesikot" target="_blank"><img id="invertocat" src="src/Invertocat.png" alt="GitHub Logo"></a></div>'
                 document.querySelector("#copyright").textContent = "Invertocat is GitHub logo used here only as social button to inform that this project integrates with GitHub."
                 document.querySelector("#copyright").style.transition = "3s"
                 nyanInAction = false
     }
 
+    document.getElementById("bongo_cat").addEventListener("click", bongo_catAlert);
+    function bongo_catAlert() {
+        alert("Bongo Cat created by StrayRogue."  )
+    }
     let select_bongo_cat = document.getElementById("bongo_cat");
     select_bongo_cat.onclick = function bongo_cat() {
-        alert("Bongo Cat created by StrayRogue." )
         document.querySelector("#cat").innerHTML = '<img id="bongo" src="src/bongocat.gif" alt="Bongo Cat" onmouseenter="piesikotEnter()" onmouseleave="piesikotLeave()" onmousedown="bongocatDown()" onmouseup="bongocatUp()" ontouchstart="bongocatDown()">'
         document.querySelector("#copyright").textContent = "Bongo Cat created by StrayRogue."
         document.querySelector("#copyright").style.transition = "3s"
         nyanInAction = false
     } 
 
+    document.getElementById("disneys_stitch").addEventListener("click", disneys_stitchAlert);
+    function disneys_stitchAlert() {
+        alert("Stitch is a character in Disney's Lilo & Stitch franchise." )
+    }
     let select_disneys_stitch = document.getElementById("disneys_stitch");
     select_disneys_stitch.onclick = function disneys_stitch() {
-        alert("Stitch is a character in Disney's Lilo & Stitch franchise." )
         document.querySelector("#cat").innerHTML = `<img id="stitch" src="src/stitch.gif" alt="Disney's Stitch" onmouseenter="piesikotEnter()" onmouseleave="piesikotLeave()" onclick="stitchClick()">` ;
         document.querySelector("#copyright").textContent = "Stitch is a character in Disney's Lilo & Stitch franchise."
         document.querySelector("#copyright").style.transition = "3s"
         nyanInAction = false
     } 
 
+    document.getElementById("nyan_cat").addEventListener("click", nyan_catAlert);
+    function nyan_catAlert() {
+        alert("Nyan Cat created by Christopher Torres." )
+    }
     let select_nyan_cat = document.getElementById("nyan_cat");
     select_nyan_cat.onclick = function nyan_cat() {
-        alert("Nyan Cat created by Christopher Torres." )
         document.querySelector("#cat").innerHTML = `<img id="nyan" src="src/nyancat.gif" alt="Nyan Cat" onmouseenter="nyancatEnter()" onmouseleave="nyancatLeave()">` ;
         document.querySelector("#copyright").textContent = "Nyan Cat created by Christopher Torres."
     } 
@@ -448,8 +460,7 @@ function nyanStart() {
                 }
             };
         
-            
-
+        
 
         }
 
