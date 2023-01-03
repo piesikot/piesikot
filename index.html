@@ -253,26 +253,161 @@
         }
 
     }
+
+
+
+
+
+
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.cat-dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.cat-dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .cat-dropdown:hover .dropbtn {
+  background-color:
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content li {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+}
+
+.dropdown-content li:hover {
+  background-color: #ddd;
+}
+
+.cat-dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+
+
+
+
+
+.projects-dropdown {
+  float: right;
+  overflow: hidden;
+}
+
+
+.projects-dropdown .projects-dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .projects-dropdown:hover .projects-dropbtn {
+  background-color:
+}
+
+.projects-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.projects-dropdown-content li {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.projects-dropdown-content li:hover {
+  background-color: #ddd;
+}
+
+.projects-dropdown:hover .projects-dropdown-content {
+  display: block;
+}
+
+a{
+    text-decoration: none;
+}
+
 </style>
 <body>
     <div id="container">
-        <nav id="nav-cats">
-                <select id="select-cat" name="select-cat" onChange="this.options[this.selectedIndex].onclick()" autocomplete="off">
-                    <option id="change-cat" value="changecat" autofocus disabled selected >Change cat</option>
-                    <option id="text_cat" value="text_cat" >Text cat</option>
-                    <option id="invertocat" value="invertocat">Invertocat</option>
-                    <option id="bongo_cat" value="bongo_cat">Bongo Cat</option>
-                    <option id="disneys_stitch" value="disneys_stitch">Disney's Stitch</option>
-                    <option id="nyan_cat" value="nyan_cat">Nyan Cat</option>
-                </select>
-        </nav>
-        <nav id="nav-projects">
-            <select id="select-project" name="select-project" onchange="location = this.value" autocomplete="off">
-                <option id="projects" value="projects" autofocus disabled selected >Projects</option>
-                <option id="pIestagram" value="../pIestagram/pIestagram.html">pIestagram</option>
 
-            </select>
-    </nav>
+            <nav id="nav-cats"> 
+                <div class="cat-dropdown">
+                  <button class="dropbtn">Change cat 🡳<!-- https://fsymbols.com/signs/arrow/  zrobić potem animację strzałki--> 
+                  </button>
+                  <div class="dropdown-content">
+                    <li id="text_cat">Text cat</li>
+                    <li id="invertocat">Invertocat</li>
+                    <li id="bongo_cat">Bongo Cat</li>
+                    <li id="disneys_stitch">Disney's Stitch</li>
+                    <li id="nyan_cat">Nyan Cat</li>
+                </div> 
+              </div>
+            </nav>
+        
+        <nav id="nav-projects">
+            <div class="projects-dropdown">
+                <button class="projects-dropbtn">Projects 🡳
+                </button>
+                <div class="projects-dropdown-content">
+                   
+                    <a href="../pIestagram/pIestagram.html"><li id="pIestagram">pIestagram</li></a>
+              </div> 
+            </div>
+        </nav>
+
         <header>
             <h2 onmouseenter="emilEnter()" onmouseleave="emilLeave()">Emil</h2>
             <h1 onmouseenter="piesikotEnter()" onmouseleave="piesikotLeave()">Pies<span id="i">i</span><span class="kot">k<span id="ot1" class="kot">ot</span></span> 
@@ -306,50 +441,38 @@
         nyanInAction = false
     }    
 
-    document.getElementById("invertocat").addEventListener("click", invertocatAlert);
-    function invertocatAlert() {
-        alert("Invertocat is GitHub logo used here only as social button to inform that this project integrates with GitHub." )
-    }
     let select_invertocat = document.getElementById("invertocat");
     select_invertocat.onclick = function invertocat() {
                 document.querySelector("#cat").innerHTML = '<div id="cat"> <a href="https://github.com/piesikot" target="_blank"><img id="invertocat" src="src/Invertocat.png" alt="GitHub Logo"></a></div>'
                 document.querySelector("#copyright").textContent = "Invertocat is GitHub logo used here only as social button to inform that this project integrates with GitHub."
                 document.querySelector("#copyright").style.transition = "3s"
+                alert("Invertocat is GitHub logo used here only as social button to inform that this project integrates with GitHub." )
                 nyanInAction = false
     }
 
-    document.getElementById("bongo_cat").addEventListener("click", bongo_catAlert);
-    function bongo_catAlert() {
-        alert("Bongo Cat created by StrayRogue."  )
-    }
     let select_bongo_cat = document.getElementById("bongo_cat");
     select_bongo_cat.onclick = function bongo_cat() {
         document.querySelector("#cat").innerHTML = '<img id="bongo" src="src/bongocat.gif" alt="Bongo Cat" onmouseenter="piesikotEnter()" onmouseleave="piesikotLeave()" onmousedown="bongocatDown()" onmouseup="bongocatUp()" ontouchstart="bongocatDown()">'
         document.querySelector("#copyright").textContent = "Bongo Cat created by StrayRogue."
         document.querySelector("#copyright").style.transition = "3s"
+        alert("Bongo Cat created by StrayRogue."  )
         nyanInAction = false
     } 
 
-    document.getElementById("disneys_stitch").addEventListener("click", disneys_stitchAlert);
-    function disneys_stitchAlert() {
-        alert("Stitch is a character in Disney's Lilo & Stitch franchise." )
-    }
     let select_disneys_stitch = document.getElementById("disneys_stitch");
     select_disneys_stitch.onclick = function disneys_stitch() {
         document.querySelector("#cat").innerHTML = `<img id="stitch" src="src/stitch.gif" alt="Disney's Stitch" onmouseenter="piesikotEnter()" onmouseleave="piesikotLeave()" onclick="stitchClick()">` ;
         document.querySelector("#copyright").textContent = "Stitch is a character in Disney's Lilo & Stitch franchise."
         document.querySelector("#copyright").style.transition = "3s"
+        alert("Stitch is a character in Disney's Lilo & Stitch franchise." )
         nyanInAction = false
     } 
 
-    document.getElementById("nyan_cat").addEventListener("click", nyan_catAlert);
-    function nyan_catAlert() {
-        alert("Nyan Cat created by Christopher Torres." )
-    }
     let select_nyan_cat = document.getElementById("nyan_cat");
     select_nyan_cat.onclick = function nyan_cat() {
         document.querySelector("#cat").innerHTML = `<img id="nyan" src="src/nyancat.gif" alt="Nyan Cat" onmouseenter="nyancatEnter()" onmouseleave="nyancatLeave()">` ;
         document.querySelector("#copyright").textContent = "Nyan Cat created by Christopher Torres."
+        alert("Nyan Cat created by Christopher Torres." )
     } 
 
     function emilEnter(){
@@ -400,7 +523,6 @@
         }
 
         function nyancatEnter(){
-
             document.querySelector("body").style.background = "black"
             document.querySelector("body").style.transition = "4s"
             document.querySelector("#copyright").style.color = "white"
@@ -412,34 +534,21 @@
             document.querySelector("p").style.transition = "4s"
             document.querySelector("#ot2").style.color = "black"
             document.querySelector("#ot2").style.transition = "4s"
-
-            //document.querySelectorAll("select").style.background = "black"
-            //document.querySelectorAll("select").style.transition = "4s"
-
-                let changeSelects = document.querySelectorAll('select')//, i;
-                for (i = 0; i < changeSelects.length; ++i) {
-                    changeSelects[i].style.background = "black";
-                }
-
-                let changeSelectsTransition = document.querySelectorAll('select')//, i;
-                for (i2 = 0; i2 < changeSelects.length; ++i2) {
-                    changeSelectsTransition[i2].style.transition = "4s";
-                }
                 
             var audio = document.getElementById("myAudio");
                            function playAudio() {
                            audio.play();
                            }
                            playAudio();
-
+                        //do dopracowania, żeby resetował się czas odtwarzania
             
-                          
-var myTimeout = setTimeout(nyanStart, 4000);
+                       
+//var myTimeout = setTimeout(nyanStart, 4000);
+//jednak nie działa tak jak powinno
 
 function nyanStart() {
     nyanInAction = true
-}
-
+    }
             if (nyanInAction == true) {
                 document.querySelector("body").style.transition = "0s"
                 document.querySelector("#copyright").style.transition = "0s"
@@ -447,42 +556,15 @@ function nyanStart() {
                 document.querySelector("p").style.transition = "0s"
                 
                 document.querySelector(".kot").style.transition = "0s"
-                document.querySelector(".kot").style.color = "black"
-
-                                let changeSelects = document.querySelectorAll('select')//, i;
-                for (i = 0; i < changeSelects.length; ++i) {
-                    changeSelects[i].style.background = "black";
-                }
-
-                let changeSelectsTransition = document.querySelectorAll('select')//, i;
-                for (i2 = 0; i2 < changeSelects.length; ++i2) {
-                    changeSelectsTransition[i2].style.transition = "0s";
-                }
+                document.querySelector(".kot").style.color = "black"         
             };
-        
-        
-
         }
 
         function nyancatLeave(){
             document.querySelector("body").style.background = "white"
             document.querySelector("body").style.transition = "0s"
-
             document.querySelector("#copyright").style.color = "black"
             document.querySelector("#copyright").style.transition = "0s"
-
-            //document.querySelector("select").style.background = "white"
-            //document.querySelector("select").style.transition = "0s"
-
-            let changeSelects = document.querySelectorAll('select')//, i;
-            for (i = 0; i < changeSelects.length; ++i) {
-                changeSelects[i].style.background = "white";
-            }
-
-            let changeSelectsTransition = document.querySelectorAll('select')//, i;
-            for (i2 = 0; i2 < changeSelects.length; ++i2) {
-                changeSelectsTransition[i2].style.transition = "0s";
-            }
 
             var audio = document.getElementById("myAudio");
                            function playAudio() {
