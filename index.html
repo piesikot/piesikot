@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+    <script src="https://kit.fontawesome.com/54faf20221.js" crossorigin="anonymous"></script>
     <title>Pies i kot</title>
 </head>
 <style> 
@@ -31,20 +32,11 @@
         right: 0px;
           
     }
-    #select-project{
-        font-size: 31px;
-        width: 140px;
-    }
-    select #select-projects {
-        width: 100px;
-    }
 
 
-    select{
-        background: white;
-        border: none;
-    }
-    
+
+
+
 
     header{
         padding: 1em;
@@ -254,12 +246,7 @@
 
     }
 
-
-
-
-
-
-
+/*FONT-SIZE DO KOREKTY*/
 .navbar {
   overflow: hidden;
   background-color: #333;
@@ -267,7 +254,6 @@
 
 .navbar a {
   float: left;
-  font-size: 16px;
   color: white;
   text-align: center;
   padding: 14px 16px;
@@ -280,7 +266,7 @@
 }
 
 .cat-dropdown .dropbtn {
-  font-size: 16px;  
+  font-size: 1.5vw;  
   border: none;
   outline: none;
   color: black;
@@ -288,6 +274,7 @@
   background-color: inherit;
   font-family: inherit;
   margin: 0;
+  
 }
 
 .navbar a:hover, .cat-dropdown:hover .dropbtn {
@@ -333,9 +320,8 @@
   overflow: hidden;
 }
 
-
 .projects-dropdown .projects-dropbtn {
-  font-size: 16px;  
+  font-size: 1.5vw;  
   border: none;
   outline: none;
   color: black;
@@ -365,6 +351,7 @@
   text-decoration: none;
   display: block;
   text-align: left;
+
 }
 
 .projects-dropdown-content li:hover {
@@ -385,7 +372,7 @@ a{
 
             <nav id="nav-cats"> 
                 <div class="cat-dropdown">
-                  <button class="dropbtn">Change cat 🡳<!-- https://fsymbols.com/signs/arrow/  zrobić potem animację strzałki--> 
+                  <button class="dropbtn">Change cat <i class="fa-sharp fa-solid fa-arrow-down"></i> <!-- https://fontawesome.com/start zrobić potem animację strzałki-->
                   </button>
                   <div class="dropdown-content">
                     <li id="text_cat">Text cat</li>
@@ -399,7 +386,7 @@ a{
         
         <nav id="nav-projects">
             <div class="projects-dropdown">
-                <button class="projects-dropbtn">Projects 🡳
+                <button class="projects-dropbtn">Projects <i class="fa-sharp fa-solid fa-arrow-down"></i>
                 </button>
                 <div class="projects-dropdown-content">
                    
