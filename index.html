@@ -312,7 +312,8 @@ Zrezygnować z vh i działać na px.
   font-family: inherit;
   margin: 0;
 
-  border-bottom: solid 2px black;
+  border-bottom: solid 2px black; 
+ /* zrobić zwijane https://tobiasahlin.com/blog/css-trick-animating-link-underlines/ */
 }
 
 .cats-dropdown-content, .projects-dropdown-content  {
@@ -323,9 +324,6 @@ Zrezygnować z vh i działać na px.
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
   font-size: 1.5rem;
-
-
-
 }
 
 .cats-dropdown-content li, .projects-dropdown-content li  {
@@ -361,13 +359,61 @@ Zrezygnować z vh i działać na px.
     text-decoration: none;
 }
 
+#cat-arrow, #projects-arrow{
+    width: 1.5em; 
+    margin-bottom: -3px;
+}
+
+#cat-arrow{
+    rotate: 90deg;
+}
+
+@keyframes rotate-right{
+  from {rotate: 0deg;}
+  to {rotate: 380deg ;}
+}
+
+#nav-cats:hover #cat-arrow{
+    animation-name: rotate-right;
+    animation-duration: 0.75s;
+    animation-fill-mode: forwards;
+}
+
+#nav-cats:hover .cats-dropdown .cats-dropbtn{
+    border-bottom: none;
+}
+
+
+
+
+
+#projects-arrow{
+    rotate: 270deg;
+}
+
+
+@keyframes rotate-left{
+  from {rotate: 0deg;}
+  to {rotate: -10deg ;}
+}
+
+#nav-projects:hover #projects-arrow{
+    animation-name: rotate-left;
+    animation-duration: 0.75s;
+    animation-fill-mode: forwards;
+}
+
+#nav-projects:hover .projects-dropdown .projects-dropbtn{
+    border-bottom: none;
+}
+
 </style>
 <body>
     <div id="container">
 
             <nav id="nav-cats"> 
                 <div class="cats-dropdown">
-                  <button class="cats-dropbtn">Change cat <i class="fa-sharp fa-solid fa-arrow-down"></i> <!-- https://fontawesome.com/start zrobić potem animację strzałki i podkreślenia-->
+                  <button class="cats-dropbtn">Change cat <img id="cat-arrow" src="src/arrow-down.png" alt="↓">
                   </button>
                   <div class="cats-dropdown-content">
                     <li id="text_cat">Text cat</li>
@@ -381,7 +427,7 @@ Zrezygnować z vh i działać na px.
         
         <nav id="nav-projects">
             <div class="projects-dropdown">
-                <button class="projects-dropbtn"><i class="fa-sharp fa-solid fa-arrow-down"></i> Projects 
+                <button class="projects-dropbtn"><img id="projects-arrow" src="src/arrow-down.png" alt="↓"> Projects 
                 </button>
                 <div class="projects-dropdown-content">
                    
