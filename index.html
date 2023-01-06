@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+     <!DOCTYPE html>
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
@@ -22,15 +22,18 @@
         position: absolute;
         top: 0px;
         left: 0px;
+        width: fit-content;
+        height: fit-content;
+        z-index: 100;
     }
-     #select-cat{
-        width: 90px;
-    }
+
     #nav-projects{
         position: absolute;
         top: 0px;
         right: 0px;
-          
+        width: fit-content;
+        height: fit-content;
+        z-index: 100;
     }
 
 
@@ -41,95 +44,96 @@
     header{
         padding: 1em;
         position: absolute;
-        top: 40%;
+        top: 45%;
         left: 55%;
         margin-right: -50%;
         transform: translate(-50%, -50%)
     }
 
-    h1, h2, p{
-        font-family: Arial, Helvetica, sans-serif;
-    }
+        h1, h2, p{
+            font-family: Arial, Helvetica, sans-serif;
+        }
 
-    h1{
-        font-size: 15vh;
-        margin-top: 1vh;
-        margin-bottom: 1vh;
-        margin-left: -30px;
-    }
+        h1{
+            font-size: 120px;
+            margin-top: -20px;
+            margin-left: -30px;
+        }
 
-    h2{
-        font-size: 10vh;
-        transition: 3s;
-        margin-left: -60px;
-    }
-    
-    p{
-        font-size: 5vh;
-        margin-left: -60px;
-    }
+        h2{
+            font-size: 70px;
+            transition: 3s;
+            margin-left: -60px;
+        }
+        
+        p{
+            font-size: 32px;
+            margin-left: -56px;
+            margin-top: -30px;
+        }
 
-    #i{
-        color: black;   
-    }
+        #i{
+            color: black;   
+        }
 
-    #ot1{
-        color: ghostwhite;   
-    }
-    
-    .dot{
-        transition: 3s;
-    }
-    
-    #ot2{
-        transition: 3s;
-        color: black;
-    }
+        #ot1{
+            color: ghostwhite;   
+        }
+        
+        .dot{
+            transition: 3s;
+            color: ghostwhite;
+        }
+        
+        #ot2{
+            transition: 3s;
+            color: black;
+        }
 
-    #co{
-        color: black;
-    }
+        #co{
+            color: black;
+        }
 
-    img{
-        font-size: 10px;
-    }
+        img{
+            font-size: 10px;
+        }
 
-    #dog{
-        position: absolute;
-        left: 20px;
-        bottom: 0;
-    }
+        #dog{
+            position: absolute;
+            left: 20px;
+            bottom: 0;
+        }
 
-    #kot{
-        position: absolute;
-        right: 20px;
-        bottom: 0;
-        opacity: 0.1;
-        transition: 3s;
-        font-size:10vh;
-        font-family: Arial, Helvetica, sans-serif;
-    }
+        #kot{
+            position: absolute;
+            right: 20px;
+            bottom: 0;
+            opacity: 0.1;
+            transition: 3s;
+            font-size:10vh;
+            font-family: Arial, Helvetica, sans-serif;
+        }
 
-    #copyright{ 
-        color: black;
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        padding: 5px;
-        text-align: center;
-        max-width: 60vw;
-        margin-left: 20vw;
-        opacity: 0.1;
-        transition: 3s;
-    }
+        #copyright{ 
+            color: black;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            padding: 5px;
+            text-align: center;
+            max-width: 60vw;
+            margin-left: 20vw;
+            opacity: 0.1;
+            transition: 3s;
+        }
 
     #text_cat{
         color: black;
     }
 
     #bongo{
-        width: 15vw;
+        width: 200px;
     }
 
     #stitch{
@@ -145,6 +149,7 @@
         float: left;
     }
 
+    /*
     @media only screen and (max-width: 1000px) {
         #github {
             display: none;
@@ -246,27 +251,59 @@
 
     }
 
-/*FONT-SIZE DO KOREKTY*/
-.navbar {
-  overflow: hidden;
-  background-color: #333;
-}
+*/
 
-.navbar a {
-  float: left;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
 
-.cat-dropdown {
-  float: left;
-  overflow: hidden;
-}
 
-.cat-dropdown .dropbtn {
-  font-size: 1.5vw;  
+
+/* Zrobić od najmniejszego ekranu do największego.
+Zrezygnować z vh i działać na px.
+*/
+
+@media only screen and (max-width: 300px) and (max-height: 300px){
+    .cats-dropdown-content, .projects-dropdown-content {
+        height: 150px;
+        overflow-y:scroll; 
+    }
+
+        #copyright {
+                display: none;
+            }
+        
+        h1{
+            font-size: 300%;
+        }
+
+        h2{
+            font-size: 200%;
+        }
+
+        #dog{
+            height: 30%;
+        }
+
+        #bongo{
+        width: 30%;
+        float: right;
+        }
+
+        #stitch{
+            width: 150px;
+            margin-right: -50px;
+        }
+
+        #nyan{
+            width: 100px;
+        }
+    }
+
+
+
+
+
+
+.cats-dropdown .cats-dropbtn, .projects-dropdown .projects-dropbtn  {
+  font-size: 1.3em;  
   border: none;
   outline: none;
   color: black;
@@ -274,95 +311,53 @@
   background-color: inherit;
   font-family: inherit;
   margin: 0;
-  
+
+  border-bottom: solid 2px black;
 }
 
-.navbar a:hover, .cat-dropdown:hover .dropbtn {
-  background-color:
-}
-
-.dropdown-content {
+.cats-dropdown-content, .projects-dropdown-content  {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+  font-size: 1.5rem;
+
+
+
 }
 
-.dropdown-content li {
+.cats-dropdown-content li, .projects-dropdown-content li  {
   float: none;
   color: black;
   padding: 12px 16px;
   text-decoration: none;
-  display: block;
+  display: block ;
   text-align: center;
   cursor: pointer;
 }
 
-.dropdown-content li:hover {
+.cats-dropdown-content li:hover, .projects-dropdown-content li:hover  {
   background-color: #ddd;
 }
 
-.cat-dropdown:hover .dropdown-content {
+.cats-dropdown:hover .cats-dropdown-content, .projects-dropdown:hover .projects-dropdown-content  {
   display: block;
 }
-
-
-
-
-
-
-
 
 .projects-dropdown {
   float: right;
   overflow: hidden;
 }
 
-.projects-dropdown .projects-dropbtn {
-  font-size: 1.5vw;  
-  border: none;
-  outline: none;
-  color: black;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-}
-
-.navbar a:hover, .projects-dropdown:hover .projects-dropbtn {
-  background-color:
-}
-
-.projects-dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
 .projects-dropdown-content li {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
   text-align: left;
+  margin-left: -10px;   
 
 }
 
-.projects-dropdown-content li:hover {
-  background-color: #ddd;
-}
-
-.projects-dropdown:hover .projects-dropdown-content {
-  display: block;
-}
-
-a{
+.projects-dropdown a {
     text-decoration: none;
 }
 
@@ -371,10 +366,10 @@ a{
     <div id="container">
 
             <nav id="nav-cats"> 
-                <div class="cat-dropdown">
-                  <button class="dropbtn">Change cat <i class="fa-sharp fa-solid fa-arrow-down"></i> <!-- https://fontawesome.com/start zrobić potem animację strzałki-->
+                <div class="cats-dropdown">
+                  <button class="cats-dropbtn">Change cat <i class="fa-sharp fa-solid fa-arrow-down"></i> <!-- https://fontawesome.com/start zrobić potem animację strzałki i podkreślenia-->
                   </button>
-                  <div class="dropdown-content">
+                  <div class="cats-dropdown-content">
                     <li id="text_cat">Text cat</li>
                     <li id="invertocat">Invertocat</li>
                     <li id="bongo_cat">Bongo Cat</li>
@@ -386,7 +381,7 @@ a{
         
         <nav id="nav-projects">
             <div class="projects-dropdown">
-                <button class="projects-dropbtn">Projects <i class="fa-sharp fa-solid fa-arrow-down"></i>
+                <button class="projects-dropbtn"><i class="fa-sharp fa-solid fa-arrow-down"></i> Projects 
                 </button>
                 <div class="projects-dropdown-content">
                    
