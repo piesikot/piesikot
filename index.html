@@ -144,10 +144,121 @@
 
     #nyan{
         margin-right: -20px;
-        
-        width: 20vw;
+        width: 200px;
         float: left;
     }
+
+
+
+
+
+
+
+
+.cats-dropdown .cats-dropbtn, .projects-dropdown .projects-dropbtn  {
+  font-size: 1.3em;  
+  border: none;
+  outline: none;
+  color: black;
+  padding: 12px 12px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+
+  border-bottom: solid 2px black; 
+ /* zrobić zwijane https://tobiasahlin.com/blog/css-trick-animating-link-underlines/ */
+}
+
+.cats-dropdown-content, .projects-dropdown-content  {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  font-size: 1.5rem;
+}
+
+.cats-dropdown-content li, .projects-dropdown-content li  {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block ;
+  text-align: center;
+  cursor: pointer;
+}
+
+.cats-dropdown-content li:hover, .projects-dropdown-content li:hover  {
+  background-color: #ddd;
+}
+
+.cats-dropdown:hover .cats-dropdown-content, .projects-dropdown:hover .projects-dropdown-content  {
+  display: block;
+}
+
+.projects-dropdown {
+  float: right;
+  overflow: hidden;
+}
+
+.projects-dropdown-content li {
+  text-align: left;
+  margin-left: -10px;   
+
+}
+
+.projects-dropdown a {
+    text-decoration: none;
+}
+
+#cat-arrow, #projects-arrow{
+    width: 1.5em; 
+    margin-bottom: -3px;
+}
+
+#cat-arrow{
+    rotate: 90deg;
+}
+
+@keyframes rotate-right{
+  from {rotate: 0deg;}
+  to {rotate: 380deg ;}
+}
+
+#nav-cats:hover #cat-arrow{
+    -webkit-animation-name: rotate-right;
+    animation-duration: 0.75s;
+    animation-fill-mode: forwards;
+}
+
+#nav-cats:hover .cats-dropdown .cats-dropbtn{
+    border-bottom: none;
+}
+
+
+
+
+#projects-arrow{
+    rotate: 270deg;
+}
+
+@keyframes rotate-left{
+  from {rotate: 0deg;}
+  to {rotate: -10deg ;}
+}
+
+#nav-projects:hover #projects-arrow{
+    animation-name: rotate-left;
+    animation-duration: 0.75s;
+    animation-fill-mode: forwards;
+}
+
+#nav-projects:hover .projects-dropdown .projects-dropbtn{
+    border-bottom: none;
+}
+
+
 
     /*
     @media only screen and (max-width: 1000px) {
@@ -261,123 +372,229 @@
 
 
 
-.cats-dropdown .cats-dropbtn, .projects-dropdown .projects-dropbtn  {
-  font-size: 1.3em;  
-  border: none;
-  outline: none;
-  color: black;
-  padding: 12px 12px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-
-  border-bottom: solid 2px black; 
- /* zrobić zwijane https://tobiasahlin.com/blog/css-trick-animating-link-underlines/ */
-}
-
-.cats-dropdown-content, .projects-dropdown-content  {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  font-size: 1.5rem;
-}
-
-.cats-dropdown-content li, .projects-dropdown-content li  {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block ;
-  text-align: center;
-  cursor: pointer;
-}
-
-.cats-dropdown-content li:hover, .projects-dropdown-content li:hover  {
-  background-color: #ddd;
-}
-
-.cats-dropdown:hover .cats-dropdown-content, .projects-dropdown:hover .projects-dropdown-content  {
-  display: block;
-}
-
-.projects-dropdown {
-  float: right;
-  overflow: hidden;
-}
-
-.projects-dropdown-content li {
-  text-align: left;
-  margin-left: -10px;   
-
-}
-
-.projects-dropdown a {
-    text-decoration: none;
-}
-
-#cat-arrow, #projects-arrow{
-    width: 1.5em; 
-    margin-bottom: -3px;
-}
-
-#cat-arrow{
-    rotate: 90deg;
-}
-
-@keyframes rotate-right{
-  from {rotate: 0deg;}
-  to {rotate: 380deg ;}
-}
-
-#nav-cats:hover #cat-arrow{
-    -webkit-animation-name: rotate-right;
-    animation-duration: 0.75s;
-    animation-fill-mode: forwards;
-}
-
-#nav-cats:hover .cats-dropdown .cats-dropbtn{
-    border-bottom: none;
-}
-
-
-
-
-
-#projects-arrow{
-    rotate: 270deg;
-}
-
-
-@keyframes rotate-left{
-  from {rotate: 0deg;}
-  to {rotate: -10deg ;}
-}
-
-#nav-projects:hover #projects-arrow{
-    animation-name: rotate-left;
-    animation-duration: 0.75s;
-    animation-fill-mode: forwards;
-}
-
-#nav-projects:hover .projects-dropdown .projects-dropbtn{
-    border-bottom: none;
-}
-
-
-
-
-
-
-
-/* Zrobić od najmniejszego ekranu do największego.
-Zrezygnować z vh i działać na px.
-*/
-
 
 /* max-width */
+
+/* 
+text-cat jest za duzy na samsungu s galaxy ultra
+zrobić height
+zrobić większy ekran - jest dobrze w symulacji o dziwo
+do poprawki height dopdown content 
+moze troche przesunac w lewo?
+*/
+
+@media only screen and (max-width: 1024px) {
+    .cats-dropdown-content, .projects-dropdown-content {
+        height: 150px;
+        overflow-y:scroll; 
+    }
+
+        h1{
+            font-size: 400%;
+            margin-top: -10px;
+            margin-bottom: 30px;
+            margin-left: -44px;
+        }
+
+        h2{
+            font-size: 170%;
+        }
+
+        p{
+            font-size:140%;
+        }
+
+        #dog{
+            width: 20%;
+        }
+
+        #text-cat{
+            font-size: 100%;
+        }
+
+        #inverto{
+            width: 30px;
+            margin-right: -10px;
+        }
+
+        #bongo{
+        width: 25%;
+        float:right;
+        margin-right: -15px;
+        }
+
+        #stitch{
+            width: 180px;
+            margin-left: -110px;
+        }
+
+        #nyan{
+            width: 100px;
+        }
+    }
+
+@media only screen and (max-width: 760px) {
+    .cats-dropdown-content, .projects-dropdown-content {
+        height: 150px;
+        overflow-y:scroll; 
+    }
+
+        #copyright {
+                display: none;
+            }
+        
+        h1{
+            font-size: 300%;
+            margin-top: -10px;
+            margin-bottom: 30px;
+            margin-left: -44px;
+        }
+
+        h2{
+            font-size: 130%;
+        }
+
+        p{
+            font-size:110%;
+        }
+
+        #dog{
+            width: 20%;
+        }
+
+        #text-cat{
+            font-size: 90%;
+        }
+
+        #inverto{
+            width: 25px;
+            margin-right: -10px;
+        }
+
+        #bongo{
+        width: 25%;
+        float:right;
+        margin-right: -15px;
+        }
+
+        #stitch{
+            width: 180px;
+            margin-left: -110px;
+        }
+
+        #nyan{
+            width: 100px;
+        }
+    }
+
+
+@media only screen and (max-width: 480px) {
+    .cats-dropdown-content, .projects-dropdown-content {
+        height: 150px;
+        overflow-y:scroll; 
+    }
+
+        #copyright {
+                display: none;
+            }
+        
+        h1{
+            font-size: 260%;
+            margin-top: -10px;
+            margin-bottom: 30px;
+            margin-left: -44px;
+        }
+
+        h2{
+            font-size: 130%;
+        }
+
+        p{
+            font-size:100%;
+        }
+
+        #dog{
+            width: 20%;
+        }
+
+        #text-cat{
+            font-size: 90%;
+        }
+
+        #inverto{
+            width: 25px;
+            margin-right: -10px;
+        }
+
+        #bongo{
+        width: 20%;
+        float:right;
+        margin-right: -15px;
+        }
+
+        #stitch{
+            width: 130px;
+            margin-left: -70px;
+        }
+
+        #nyan{
+            width: 60px;
+        }
+    }
+
+@media only screen and (max-width: 350px) {
+    .cats-dropdown-content, .projects-dropdown-content {
+        height: 150px;
+        overflow-y:scroll; 
+    }
+
+        #copyright {
+                display: none;
+            }
+        
+        h1{
+            font-size: 220%;
+            margin-top: -10px;
+            margin-bottom: 30px;
+            margin-left: -44px;
+        }
+
+        h2{
+            font-size: 110%;
+        }
+
+        p{
+            font-size:85%;
+        }
+
+        #dog{
+            width: 20%;
+        }
+
+        #text-cat{
+            font-size: 75%;
+        }
+
+        #inverto{
+            width: 20px;
+            margin-right: -10px;
+        }
+
+        #bongo{
+        width: 20%;
+        float:right;
+        margin-right: -15px;
+        }
+
+        #stitch{
+            width: 130px;
+            margin-left: -70px;
+        }
+
+        #nyan{
+            width: 60px;
+        }
+    }
 
 
 @media only screen and (max-width: 250px) {
@@ -410,7 +627,11 @@ Zrezygnować z vh i działać na px.
         }
 
         #dog{
-            height: 30%;
+            width: 15%;
+        }
+
+        #text-cat{
+            font-size: 70%;
         }
 
         #inverto{
@@ -421,7 +642,7 @@ Zrezygnować z vh i działać na px.
         #bongo{
         width: 20%;
         float:right;
-        margin-right: -10px;
+        margin-right: -15px;
         }
 
         #stitch{
@@ -433,59 +654,6 @@ Zrezygnować z vh i działać na px.
             width: 50px;
         }
     }
-
-
-
-
-
-
-
-
-
-/*
-
-
-@media only screen and (max-width: 300px) {
-    .cats-dropdown-content, .projects-dropdown-content {
-        height: 150px;
-        overflow-y:scroll; 
-    }
-
-    .cats-dropdown .cats-dropbtn, .projects-dropdown .projects-dropbtn {
-        border-bottom: solid 2px black;
-    }
-
-        #copyright {
-                display: none;
-            }
-        
-        h1{
-            font-size: 300%;
-        }
-
-        h2{
-            font-size: 200%;
-        }
-
-        #dog{
-            height: 30%;
-        }
-
-        #bongo{
-        width: 30%;
-        float: right;
-        }
-
-        #stitch{
-            width: 150px;
-            margin-right: -50px;
-        }
-
-        #nyan{
-            width: 100px;
-        }
-    }
-*/
 
 </style>
 <body>
@@ -527,7 +695,7 @@ Zrezygnować z vh i działać na px.
             <img id="dog" src="src/e-Pies.svg" alt="e-Pies Logo">
             <div id="kot" onmouseenter="piesikotEnter()" onmouseleave="piesikotLeave()">
                 <div id="cat">
-                    <span id="text_cat">/ᐠ..ᐟ\</span>
+                    <span id="text-cat">/ᐠ..ᐟ\</span>
             </div>
         </main>
         <footer> 
@@ -543,7 +711,7 @@ Zrezygnować z vh i działać na px.
 
     let select_text_cat = document.getElementById("text_cat");
     select_text_cat.onclick = function text_cat() {
-        document.querySelector("#cat").innerHTML = '<span id="text_cat">/ᐠ..ᐟ\\</span>'
+        document.querySelector("#cat").innerHTML = '<span id="text-cat">/ᐠ..ᐟ\\</span>'
         document.querySelector("#copyright").textContent = "Just cat made from text."
         document.querySelector("#copyright").style.transition = "3s"
         nyanInAction = false
