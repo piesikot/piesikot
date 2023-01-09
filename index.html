@@ -45,7 +45,7 @@
         padding: 1em;
         position: absolute;
         top: 45%;
-        left: 60%;
+        left: 55%;
         margin-right: -50%;
         transform: translate(-50%, -50%)
     }
@@ -110,7 +110,6 @@
             bottom: 0;
             opacity: 0.1;
             transition: 3s;
-            font-size:10vh;
             font-family: Arial, Helvetica, sans-serif;
         }
 
@@ -128,12 +127,15 @@
             transition: 3s;
         }
 
-    #text_cat{
+    #text-cat{
         color: black;
+        font-size: 50px;       
     }
 
     #bongo{
         width: 200px;
+        float:right;
+        margin-bottom: 10px;
     }
 
     #stitch{
@@ -199,13 +201,17 @@
 
 .projects-dropdown {
   float: right;
-  overflow: hidden;
+  overflow: hidden; 
 }
 
-.projects-dropdown-content li {
-  text-align: left;
-  margin-left: -10px;   
+.projects-dropdown-content{
+  text-align: center;
+  margin-left: -20px;   
+}
 
+/* jak zrobić, aby element w środku nie przejmował opacity? */
+.cats-dropdown-content, .projects-dropdown-content {
+    opacity: 0.85;
 }
 
 .projects-dropdown a {
@@ -239,6 +245,8 @@
 
 
 
+
+
 #projects-arrow{
     rotate: 270deg;
 }
@@ -260,128 +268,18 @@
 
 
 
-    /*
-    @media only screen and (max-width: 1000px) {
-        #github {
-            display: none;
-        }
 
-        #dog{
-            height: 20vw;
-        }
-        
-        #stitch{
-            width: 200px;
-            margin-left: -20vw;
-        }
+/* correct navbar na duze ekrany */
+
+/* min-width */
+
+@media only screen and (min-width: 1025px) {
+    #copyright{
+        font-size: 2.5vw;
     }
-
-    @media only screen and (max-height: 500px) {
-        #dog{
-            height: 10vw;
-        }
-
-        #bongo{
-        width: 10vw;
-        }
-
-        #stitch{
-            width: 200px;
-            margin-left: -15vw;
-        }
-    }
-
-    @media only screen and (max-width: 750px) {
-        #dog{
-            height: 20vh;
-        }
-
-        #kot{
-            font-size: 5vh;
-        }
-
-        #stitch{
-            width: 200px;
-            margin-left: -20vw;
-        }
-
-        #nyan{
-            margin-bottom: -20px;
-        }
-
-        h1{
-            font-size: 15vh;
-        }
-
-        h2{
-            font-size: 10vh;
-        }
-
-        p{
-            font-size: 5vh ;
-        }
-    }
-
-    @media only screen and (max-width: 550px) {
-        h1{
-            font-size: 10vh;
-        }
-
-        h2{
-            font-size: 5vh;
-        }
-
-        p{
-            font-size: 2.5vh ;
-        }
-        #copyright{
-            display: none;
-        }
-
-        #stitch{
-            margin-left: -30vw;
-        }
-    }
-
-        @media only screen and (max-width: 300px) {
-        h1{
-            font-size: 5vh;
-        }
-
-        h2{
-            font-size: 2.5vh;
-        }
-
-        p{
-            font-size: 1.5vh ;
-        }
-
-        #stitch{
-            margin-left: -45vw;
-        }
-
-    }
-
-*/
-
-
-
-
-
-
-
-
-
+}
 
 /* max-width */
-
-/* 
-text-cat jest za duzy na samsungu s galaxy ultra
-zrobić height
-zrobić większy ekran - jest dobrze w symulacji o dziwo
-do poprawki height dopdown content 
-moze troche przesunac w lewo?
-*/
 
 @media only screen and (max-width: 1024px) {
     .cats-dropdown-content, .projects-dropdown-content {
@@ -390,18 +288,18 @@ moze troche przesunac w lewo?
     }
 
         h1{
-            font-size: 400%;
+            font-size: 600%;
             margin-top: -10px;
             margin-bottom: 30px;
             margin-left: -44px;
         }
 
         h2{
-            font-size: 170%;
+            font-size: 300%;
         }
 
         p{
-            font-size:140%;
+            font-size:200%;
         }
 
         #dog{
@@ -409,7 +307,7 @@ moze troche przesunac w lewo?
         }
 
         #text-cat{
-            font-size: 100%;
+            font-size: 2em;
         }
 
         #inverto{
@@ -419,8 +317,6 @@ moze troche przesunac w lewo?
 
         #bongo{
         width: 25%;
-        float:right;
-        margin-right: -15px;
         }
 
         #stitch{
@@ -451,11 +347,11 @@ moze troche przesunac w lewo?
         }
 
         h2{
-            font-size: 130%;
+            font-size: 150%;
         }
 
         p{
-            font-size:110%;
+            font-size:100%;
         }
 
         #dog{
@@ -463,7 +359,7 @@ moze troche przesunac w lewo?
         }
 
         #text-cat{
-            font-size: 90%;
+            font-size: 1.6em;
         }
 
         #inverto{
@@ -473,8 +369,6 @@ moze troche przesunac w lewo?
 
         #bongo{
         width: 25%;
-        float:right;
-        margin-right: -15px;
         }
 
         #stitch{
@@ -486,7 +380,6 @@ moze troche przesunac w lewo?
             width: 100px;
         }
     }
-
 
 @media only screen and (max-width: 480px) {
     .cats-dropdown-content, .projects-dropdown-content {
@@ -518,7 +411,7 @@ moze troche przesunac w lewo?
         }
 
         #text-cat{
-            font-size: 90%;
+            font-size: 1.4em;
         }
 
         #inverto{
@@ -528,8 +421,6 @@ moze troche przesunac w lewo?
 
         #bongo{
         width: 20%;
-        float:right;
-        margin-right: -15px;
         }
 
         #stitch{
@@ -572,7 +463,7 @@ moze troche przesunac w lewo?
         }
 
         #text-cat{
-            font-size: 75%;
+            font-size: 1.2em;
         }
 
         #inverto{
@@ -582,8 +473,6 @@ moze troche przesunac w lewo?
 
         #bongo{
         width: 20%;
-        float:right;
-        margin-right: -15px;
         }
 
         #stitch{
@@ -596,72 +485,44 @@ moze troche przesunac w lewo?
         }
     }
 
+    /* 
+ustawic height na telefony?
+refractoring jednak na vw i vh?
+249x249 się zesrało
+*/
 
-@media only screen and (max-width: 250px) {
+/* max-height */
+
+@media only screen and (max-height: 200px) {
     .cats-dropdown-content, .projects-dropdown-content {
-        height: 150px;
+        height: 300px;
         overflow-y:scroll; 
     }
 
     .cats-dropdown .cats-dropbtn, .projects-dropdown .projects-dropbtn {
         border-bottom: none;
     }
+}
 
-        #copyright {
-                display: none;
-            }
-        
-        h1{
-            font-size: 200%;
-            margin-top: -10px;
-            margin-bottom: 30px;
-            margin-left: -44px;
-        }
-
-        h2{
-            font-size: 100%;
-        }
-
-        p{
-            font-size:75%;
-        }
-
-        #dog{
-            width: 15%;
-        }
-
-        #text-cat{
-            font-size: 70%;
-        }
-
-        #inverto{
-            width: 20px;
-            margin-right: -10px;
-        }
-
-        #bongo{
-        width: 20%;
-        float:right;
-        margin-right: -15px;
-        }
-
-        #stitch{
-            width: 100px;
-            margin-left: -50px;
-        }
-
-        #nyan{
-            width: 50px;
-        }
+@media only screen and (max-height: 350px) {
+    #dog{
+        width: 50vh;
     }
+}
+
+@media only screen and (min-height: 400px) {
+    .cats-dropdown-content, .projects-dropdown-content {
+        height: fit-content;
+    }
+}
 
 </style>
 <body>
     <div id="container">
-
+<!-- png się nie wczytuje na telefonie -->
             <nav id="nav-cats"> 
                 <div class="cats-dropdown">
-                  <button class="cats-dropbtn">Change cat <img id="cat-arrow" src="src/arrow-down.png" alt="↓">
+                  <button class="cats-dropbtn">Change cat <img id="cat-arrow" src="src/arrow-down.png" alt="">
                   </button>
                   <div class="cats-dropdown-content">
                     <li id="text_cat">Text cat</li>
@@ -675,11 +536,11 @@ moze troche przesunac w lewo?
         
         <nav id="nav-projects">
             <div class="projects-dropdown">
-                <button class="projects-dropbtn"><img id="projects-arrow" src="src/arrow-down.png" alt="↓"> Projects 
+                <button class="projects-dropbtn"><img id="projects-arrow" src="src/arrow-down.png" alt=""> Projects 
                 </button>
                 <div class="projects-dropdown-content">
                    
-                    <a href="../pIestagram/pIestagram.html"><li id="pIestagram">pIestagram</li></a>
+                    <a href="../pIestagram/pIestagram.html"><li id="pIestagram"><wrap>pIestagram</wrap></li></a>
               </div> 
             </div>
         </nav>
