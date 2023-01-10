@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0">
-    <script src="https://kit.fontawesome.com/54faf20221.js" crossorigin="anonymous"></script>
     <title>Pies i kot</title>
 </head>
 <style> 
@@ -191,10 +190,6 @@
   cursor: pointer;
 }
 
-.cats-dropdown-content li:hover, .projects-dropdown-content li:hover  {
-  background-color: #ddd;
-}
-
 .cats-dropdown:hover .cats-dropdown-content, .projects-dropdown:hover .projects-dropdown-content  {
   display: block;
 }
@@ -209,9 +204,9 @@
   margin-left: -20px;   
 }
 
-/* jak zrobić, aby element w środku nie przejmował opacity? */
 .cats-dropdown-content, .projects-dropdown-content {
-    opacity: 0.85;
+    background-color: rgba(255, 255, 255, 0.85);
+    color: rgba(0, 0, 0, 0.85);
 }
 
 .projects-dropdown a {
@@ -219,8 +214,8 @@
 }
 
 #cat-arrow, #projects-arrow{
-    width: 1.5em; 
-    margin-bottom: -3px;
+    width: 3em; 
+    margin-bottom: -7px;
 }
 
 #cat-arrow{
@@ -271,11 +266,24 @@
 
 /* correct navbar na duze ekrany */
 
-/* min-width */
+/* min-width / big-screens */
 
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 1600px) {
+    nav{
+        font-size: 3em;
+    }
+
+    .cats-dropdown-content, .projects-dropdown-content {
+        font-size: 1.5em;
+    }
+
+
+    .projects-dropdown-content{
+        margin-left: -100px;
+    }
+
     #copyright{
-        font-size: 2.5vw;
+        font-size: 2vw;
     }
 }
 
@@ -328,6 +336,8 @@
             width: 100px;
         }
     }
+
+/* max-width / mobile */
 
 @media only screen and (max-width: 760px) {
     .cats-dropdown-content, .projects-dropdown-content {
@@ -382,11 +392,9 @@
     }
 
 @media only screen and (max-width: 480px) {
-    .cats-dropdown-content, .projects-dropdown-content {
-        height: 150px;
-        overflow-y:scroll; 
+.cats-dropdown .cats-dropbtn, .projects-dropdown .projects-dropbtn {
+        border-bottom: none;
     }
-
         #copyright {
                 display: none;
             }
@@ -485,10 +493,9 @@
         }
     }
 
-    /* 
-ustawic height na telefony?
+/* 
+h2, h1 i p na telefonie są za małe
 refractoring jednak na vw i vh?
-249x249 się zesrało
 */
 
 /* max-height */
@@ -506,7 +513,7 @@ refractoring jednak na vw i vh?
 
 @media only screen and (max-height: 350px) {
     #dog{
-        width: 50vh;
+        width: 25vh;
     }
 }
 
@@ -519,10 +526,9 @@ refractoring jednak na vw i vh?
 </style>
 <body>
     <div id="container">
-<!-- png się nie wczytuje na telefonie -->
             <nav id="nav-cats"> 
                 <div class="cats-dropdown">
-                  <button class="cats-dropbtn">Change cat <img id="cat-arrow" src="src/arrow-down.png" alt="">
+                  <button class="cats-dropbtn">Change cat <img id="cat-arrow" src="src/south.svg" alt="">
                   </button>
                   <div class="cats-dropdown-content">
                     <li id="text_cat">Text cat</li>
@@ -536,11 +542,10 @@ refractoring jednak na vw i vh?
         
         <nav id="nav-projects">
             <div class="projects-dropdown">
-                <button class="projects-dropbtn"><img id="projects-arrow" src="src/arrow-down.png" alt=""> Projects 
+                <button class="projects-dropbtn"><img id="projects-arrow" src="src/south.svg" alt="">Projects 
                 </button>
                 <div class="projects-dropdown-content">
-                   
-                    <a href="../pIestagram/pIestagram.html"><li id="pIestagram"><wrap>pIestagram</wrap></li></a>
+                    <a href="../pIestagram/pIestagram.html"><li id="pIestagram">pIestagram</li></a>
               </div> 
             </div>
         </nav>
