@@ -1,4 +1,4 @@
-     <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
@@ -126,29 +126,6 @@
             transition: 3s;
         }
 
-    #text-cat{
-        color: black;
-        font-size: 50px;       
-    }
-
-    #bongo{
-        width: 200px;
-        float:right;
-        margin-bottom: 10px;
-    }
-
-    #stitch{
-        margin-bottom: -14px;
-        margin-right: -100px;
-        overflow: hidden;
-    }
-
-    #nyan{
-        margin-right: -20px;
-        width: 200px;
-        float: left;
-    }
-
 
 
 
@@ -165,10 +142,8 @@
   background-color: inherit;
   font-family: inherit;
   margin: 0;
-
-  border-bottom: solid 2px black; 
- /* zrobić zwijane https://tobiasahlin.com/blog/css-trick-animating-link-underlines/ */
 }
+
 
 .cats-dropdown-content, .projects-dropdown-content  {
   display: none;
@@ -215,51 +190,148 @@
 
 #cat-arrow, #projects-arrow{
     width: 3em; 
-    margin-bottom: -7px;
+    margin-bottom: -9px;
+    transition:0.7s;
 }
-
+ 
 #cat-arrow{
     rotate: 90deg;
 }
-
-@keyframes rotate-right{
-  from {rotate: 0deg;}
-  to {rotate: 380deg ;}
-}
-
-#nav-cats:hover #cat-arrow{
-    -webkit-animation-name: rotate-right;
-    animation-duration: 0.75s;
-    animation-fill-mode: forwards;
-}
-
-#nav-cats:hover .cats-dropdown .cats-dropbtn{
-    border-bottom: none;
-}
-
-
-
-
-
 
 #projects-arrow{
     rotate: 270deg;
 }
 
-@keyframes rotate-left{
-  from {rotate: 0deg;}
-  to {rotate: -10deg ;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* nie wiem, czemu nie jestem w stanie tego ustawić na buttonie, i musiałem zrobić nowego diva */
+#cat-dropbtn-underline{
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  transform: scaleX(1);
+  transform-origin: top left;
+  transition: transform 0.3s ease;
 }
 
-#nav-projects:hover #projects-arrow{
-    animation-name: rotate-left;
-    animation-duration: 0.75s;
-    animation-fill-mode: forwards;
+#nav-cats:hover #cat-dropbtn-underline {
+    transform: scaleX(0);
+  transform-origin: top left;
 }
 
-#nav-projects:hover .projects-dropdown .projects-dropbtn{
-    border-bottom: none;
+#projects-dropbtn-underline{
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  transform: scaleX(1);
+  transform-origin: top left;
+  transition: transform 0.3s ease;
 }
+
+
+
+
+
+
+#nav-projects:hover #projects-dropbtn-underline {
+    transform: scaleX(0);
+  transform-origin: top right;
+} 
+
+
+
+
+
+
+
+
+
+
+.project-underline{
+display: inline-block;
+  position: relative;
+  color: black;
+}
+
+.cat-underline, .project-underline {
+  display: inline-block;
+  position: relative;
+  color: black;
+}
+
+.cat-underline:after, .project-underline::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  transform-origin: bottom ;
+  transition: transform 0.7s ease;
+}
+
+.cat-underline:hover:after, .project-underline:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom;
+}
+
+
+
+
+
+
+
+
+
+
+/* Cats */
+#text-cat{
+        color: black;
+        font-size: 50px;       
+    }
+
+    #bongo{
+        width: 200px;
+        float:right;
+        margin-bottom: 10px;
+    }
+
+    #stitch{
+        margin-bottom: -14px;
+        margin-right: -100px;
+        overflow: hidden;
+    }
+
+    #nyan{
+        margin-right: -20px;
+        width: 200px;
+        float: left;
+    }
 
 
 
@@ -526,26 +598,28 @@ refractoring jednak na vw i vh?
 </style>
 <body>
     <div id="container">
-            <nav id="nav-cats"> 
+            <nav id="nav-cats" onmouseenter="navcatsEnter()" onmouseleave="navcatsLeave()"> 
                 <div class="cats-dropdown">
-                  <button class="cats-dropbtn">Change cat <img id="cat-arrow" src="src/south.svg" alt="">
+                  <button class="cats-dropbtn" >Change cat <img id="cat-arrow" src="src/south.svg" alt="">
                   </button>
-                  <div class="cats-dropdown-content">
-                    <li id="text_cat">Text cat</li>
-                    <li id="invertocat">Invertocat</li>
-                    <li id="bongo_cat">Bongo Cat</li>
-                    <li id="disneys_stitch">Disney's Stitch</li>
-                    <li id="nyan_cat">Nyan Cat</li>
+                  <div id="cat-dropbtn-underline"></div>
+                  <div class="cats-dropdown-content" onmouseenter="catsdropdowncontentEnter()" >
+                    <li id="text_cat" class="cat-underline">Text cat</li>
+                    <li id="invertocat" class="cat-underline">Invertocat</li>
+                    <li id="bongo_cat" class="cat-underline">Bongo Cat</li>
+                    <li id="disneys_stitch" class="cat-underline">Disney's Stitch</li>
+                    <li id="nyan_cat" class="cat-underline">Nyan Cat</li>
                 </div> 
               </div>
             </nav>
         
-        <nav id="nav-projects">
+        <nav id="nav-projects" onmouseenter="navcprojectsEnter()" onmouseleave="navprojectsLeave()" >
             <div class="projects-dropdown">
-                <button class="projects-dropbtn"><img id="projects-arrow" src="src/south.svg" alt="">Projects 
+                <button class="projects-dropbtn"><img id="projects-arrow" src="src/south.svg" alt=""> Projects
                 </button>
+                <div id="projects-dropbtn-underline"></div>
                 <div class="projects-dropdown-content">
-                    <a href="../pIestagram/pIestagram.html"><li id="pIestagram">pIestagram</li></a>
+                    <a href="../pIestagram/pIestagram.html"><li id="pIestagram" class="project-underline">pIestagram</li></a>
               </div> 
             </div>
         </nav>
@@ -616,6 +690,22 @@ refractoring jednak na vw i vh?
         document.querySelector("#copyright").textContent = "Nyan Cat created by Christopher Torres."
         alert("Nyan Cat created by Christopher Torres." )
     } 
+
+    function navcatsEnter() {
+        document.getElementById("cat-arrow").style.transform = "rotate(0.80turn)";
+    }
+
+    function navcatsLeave(){
+        document.getElementById("cat-arrow").style.transform = "rotate(0turn)";
+    }
+
+    function navcprojectsEnter() {
+        document.getElementById("projects-arrow").style.transform = "rotate(-0.80turn)";
+    }
+
+    function navprojectsLeave(){
+        document.getElementById("projects-arrow").style.transform = "rotate(0turn)";
+    }
 
     function emilEnter(){
         document.getElementById("i").style.margin = "0px 10px 0px 10px";
