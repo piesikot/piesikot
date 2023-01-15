@@ -474,6 +474,34 @@ language{
   }
 }
 
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid black;
+  text-align: center;
+  font-size: 30px;
+}
+
+@media screen and (orientation: landscape) {
+      html {
+        transform: rotate(-90deg);
+        transform-origin: left top;
+        width: 100vh;
+        height: 100vw;
+        overflow-x: hidden;
+        position: absolute;
+        top: 100%;
+        left: 0;
+      }
+    }
 </style>
 
 <body>
@@ -547,7 +575,7 @@ language{
           <div id="midnav">
             <div class="options" id="option-active">POSTS</div><div class="options">SAVED</div><div class="options">TAGGED</div>
           </div>
-
+<!-- 
           <div id="gallery">
             <div class="row">
               <div ><img class="picture"  src="av.png" alt="Cube of Truth"></div> 
@@ -565,6 +593,19 @@ language{
               <div ><img class="picture" src="klatamusibyc.jpg" alt="vegains"></div> 
             </div>
           </div>
+-->
+
+<div class="grid-container">
+  <div ><img class="picture"  src="av.png" alt="Cube of Truth"></div> 
+  <div ><img class="picture"  src="ciurki.jpg" alt="moje szczurki"></div>
+  <div ><img class="picture"  src="faza.JPG" alt="sfazowana Perełka"></div>  
+  <div ><img class="picture"  src="perelkasmile.jpg" alt="uśmiech Perełki"></div> 
+  <div ><img class="picture"  src="micuch.jpg" alt="Micuch"></div>
+  <div ><img class="picture"  src="brazzers.png" alt="łysy z Brazzers xd"></div> 
+  <div ><img class="picture" src="samojebka.jpg" alt="selfie"></div>
+  <div ><img class="picture" src="junak.jpg" alt="my motorbike"></div> 
+  <div ><img class="picture" src="klatamusibyc.jpg" alt="vegains"></div> 
+</div>  
 
         </div>
 
