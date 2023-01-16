@@ -2,7 +2,6 @@
 <head>
 
 <meta charset="utf-8">
-<link href="pIestagram.css" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>pIestagram</title>
 
@@ -471,6 +470,13 @@ language{
 @media only screen and (min-width: 735px){
   #profile-container-small, #name-small, #bio-small, #posts-small, #followers-small{
     display: none;
+  }
+}
+
+@media only screen and (orientation:portrait) {
+  body {
+    height: 100vw;
+    transform: rotate(90deg);
   }
 }
 
