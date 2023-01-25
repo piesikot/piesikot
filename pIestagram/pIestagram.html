@@ -466,17 +466,9 @@ language{
   }
 }
 
-
 @media only screen and (min-width: 735px){
   #profile-container-small, #name-small, #bio-small, #posts-small, #followers-small{
     display: none;  
-  }
-}
-
-@media only screen and (orientation:landscape) {
-  body {
-    height: 100vw;
-    transform: rotate(90deg);
   }
 }
 
@@ -594,3 +586,9 @@ language{
               <language>English  <i class="down-arrow"></i></language> © 2021 pIestagram from e-Pies
             </div>
           </footer>
+
+ <script>
+var myScreenOrientation = window.screen.orientation;
+myScreenOrientation.lock("portrait"); 
+ </script>        
+</body>
