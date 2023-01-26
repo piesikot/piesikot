@@ -6,6 +6,17 @@
 <title>pIestagram</title>
 
 <style>
+#rotateyourphone{
+  display: none;
+  width: fit-content;
+  height: auto;
+  /* Center vertically and horizontally */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  font-size: 4vw;
+}
 
 HTML{
   margin: -8PX;
@@ -442,9 +453,7 @@ language{
 
   #counters, #name, #bio {
     display: none;
-
   }
-
 }
 
 @media only screen and (max-width: 450px){
@@ -454,11 +463,9 @@ language{
   #midnav{gap:10px;}
 
   #profile-edit-profile-small{
-    width: fit-content;
+      width: fit-content;
+    }
   }
-
-  }
-
 
 @media only screen and (max-width: 345px){
   #logo {
@@ -472,121 +479,133 @@ language{
   }
 }
 
+@media only screen and (min-width: 735px) and (orientation: landscape) {
+  #body-container, footer{
+    display: none;
+  }
+  #rotateyourphone{
+    display: block;
+  }
+}
+
 </style>
 
 <body>
-  <div id="topnav-background">
-    <div id="topnav-container">
-        <div id="topnav">
+  <div id="rotateyourphone"> Please rotate your phone.</div>
+  <div id="body-container">
+    <div id="topnav-background">
+      <div id="topnav-container">
+          <div id="topnav">
 
-          <div id="logo-container">
-            <img id="logo" src="pIestagram.png">
+            <div id="logo-container">
+              <img id="logo" src="pIestagram.png">
+            </div>
+
+            <div id="search-container">
+              <input id="search" placeholder="Search" ></input>
+            </div>
+
+            <div id="icon-container">
+              <img src="home.png" class="icon"> <img src="messages.png" class="icon"> <img src="add.png" class="icon"> <img src="explore.png" class="icon"> <img src="heart.png" class="icon"><div id="profile-photo-topnav-border" class="icon"><div id="profile-photo-topnav"> </div> </div>
+            </div>
+
           </div>
-
-          <div id="search-container">
-            <input id="search" placeholder="Search" ></input>
-          </div>
-
-          <div id="icon-container">
-            <img src="home.png" class="icon"> <img src="messages.png" class="icon"> <img src="add.png" class="icon"> <img src="explore.png" class="icon"> <img src="heart.png" class="icon"><div id="profile-photo-topnav-border" class="icon"><div id="profile-photo-topnav"> </div> </div>
-          </div>
-
-        </div>
-    </div>
-  </div>
-
-    <div id="container">
-      <div id=profile-container>
-          <div id="profile-photo-big">
-
-
-            
-          </div>
-            <div id="profile-info">
-              <h2>
-                    e-Pies <div id="profile-edit-profile"> Edit Profile</div>  <img src="sun.png">
-              </h2>
-                <p> 
-                  <div id="counters"> <span><wrap>8</wrap> posts</span>
-                    <wrap>666M</wrap> followers</div>
-                    <div id="name"> <span>Emil Piesik</span> </div>
-                    <div id="bio"><span id="realinsta">My real instagram:</span> <a id="realinstalink" href="https://www.instagram.com/__animal_liberation__">@__animal_liberation__</a></div>
-                  </div>
-                </p>
       </div>
+    </div>
 
-        <header>
-          <div id="profile-container-small">
-            <div id="profile-photo-small"></div>
-              <h2>e-Pies</h2> <div id="sun-icon-small" ><img  src="sun.png"></div>
-            <div id="profile-edit-profile-small"> Edit Profile</div>
-        </header>
+      <div id="container">
+        <div id=profile-container>
+            <div id="profile-photo-big">
 
-              <div id="nameandbio-small">
-                <div id="name-small"><span>Emil Piesik</span> </div>
-                <div id="bio-small"><span>My real instagram:</span> <a id="realinstalink2" href="https://www.instagram.com/__animal_liberation__">@__animal_liberation__</a></div>
-              </div>
-              <div id="counters-container-small">
-                <div id="posts-small">
-                  <div class="counter-small">
-                    8
-                  </div>
-                posts
-                </div>
-                <div id="followers-small">
-                  <div class="counter-small">
-                    666M
-                  </div>
-                  followers
-                </div>
-              </div>
-          </div>
 
-          <div id="midnav">
-            <div class="options" id="option-active">POSTS</div><div class="options">SAVED</div><div class="options">TAGGED</div>
-          </div>
-
-          <div id="gallery">
-            <div class="row">
-              <div ><img class="picture"  src="av.png" alt="Cube of Truth"></div> 
-              <div ><img class="picture"  src="ciurki.jpg" alt="moje szczurki"></div>
-              <div ><img class="picture"  src="faza.JPG" alt="sfazowana Perełka"></div>  
+              
             </div>
-            <div class="row">
-              <div ><img class="picture"  src="perelkasmile.jpg" alt="uśmiech Perełki"></div> 
-              <div ><img class="picture"  src="micuch.jpg" alt="Micuch"></div>
-              <div ><img class="picture"  src="brazzers.png" alt="łysy z Brazzers xd"></div> 
-            </div>
-            <div class="row">
-              <div ><img class="picture" src="samojebka.jpg" alt="selfie"></div>
-              <div ><img class="picture" src="junak.jpg" alt="my motorbike"></div> 
-              <div ><img class="picture" src="klatamusibyc.jpg" alt="vegains"></div> 
-            </div>
-          </div>
-
+              <div id="profile-info">
+                <h2>
+                      e-Pies <div id="profile-edit-profile"> Edit Profile</div>  <img src="sun.png">
+                </h2>
+                  <p> 
+                    <div id="counters"> <span><wrap>8</wrap> posts</span>
+                      <wrap>666M</wrap> followers</div>
+                      <div id="name"> <span>Emil Piesik</span> </div>
+                      <div id="bio"><span id="realinsta">My real instagram:</span> <a id="realinstalink" href="https://www.instagram.com/__animal_liberation__">@__animal_liberation__</a></div>
+                    </div>
+                  </p>
         </div>
 
-          <footer>
-            <div id="bottommenu">
-              <div class="bottommenu-item">e-Pies</div>
-              <div class="bottommenu-item">About</div>
-              <div class="bottommenu-item">Blog</div>
-              <div class="bottommenu-item">Jobs</div>
-              <div class="bottommenu-item">Help</div>
-              <div class="bottommenu-item">API</div>
-              <div class="bottommenu-item">Privacy</div>
-              <div class="bottommenu-item">Terms</div>
-              <div class="bottommenu-item">Top Accounts</div>
-              <div class="bottommenu-item">Hashtags</div>
-              <div class="bottommenu-item">Locations</div>
-              <div class="bottommenu-item">Instagram Lite</div>
+          <header>
+            <div id="profile-container-small">
+              <div id="profile-photo-small"></div>
+                <h2>e-Pies</h2> <div id="sun-icon-small" ><img  src="sun.png"></div>
+              <div id="profile-edit-profile-small"> Edit Profile</div>
+          </header>
+
+                <div id="nameandbio-small">
+                  <div id="name-small"><span>Emil Piesik</span> </div>
+                  <div id="bio-small"><span>My real instagram:</span> <a id="realinstalink2" href="https://www.instagram.com/__animal_liberation__">@__animal_liberation__</a></div>
+                </div>
+                <div id="counters-container-small">
+                  <div id="posts-small">
+                    <div class="counter-small">
+                      8
+                    </div>
+                  posts
+                  </div>
+                  <div id="followers-small">
+                    <div class="counter-small">
+                      666M
+                    </div>
+                    followers
+                  </div>
+                </div>
             </div>
 
-            <div id="bottomnav">
-              <language>English  <i class="down-arrow"></i></language> © 2021 pIestagram from e-Pies
+            <div id="midnav">
+              <div class="options" id="option-active">POSTS</div><div class="options">SAVED</div><div class="options">TAGGED</div>
             </div>
-          </footer>
 
+            <div id="gallery">
+              <div class="row">
+                <div ><img class="picture"  src="av.png" alt="Cube of Truth"></div> 
+                <div ><img class="picture"  src="ciurki.jpg" alt="moje szczurki"></div>
+                <div ><img class="picture"  src="faza.JPG" alt="sfazowana Perełka"></div>  
+              </div>
+              <div class="row">
+                <div ><img class="picture"  src="perelkasmile.jpg" alt="uśmiech Perełki"></div> 
+                <div ><img class="picture"  src="micuch.jpg" alt="Micuch"></div>
+                <div ><img class="picture"  src="brazzers.png" alt="łysy z Brazzers xd"></div> 
+              </div>
+              <div class="row">
+                <div ><img class="picture" src="samojebka.jpg" alt="selfie"></div>
+                <div ><img class="picture" src="junak.jpg" alt="my motorbike"></div> 
+                <div ><img class="picture" src="klatamusibyc.jpg" alt="vegains"></div> 
+              </div>
+            </div>
+
+          </div>
+
+            <footer>
+              <div id="bottommenu">
+                <div class="bottommenu-item">e-Pies</div>
+                <div class="bottommenu-item">About</div>
+                <div class="bottommenu-item">Blog</div>
+                <div class="bottommenu-item">Jobs</div>
+                <div class="bottommenu-item">Help</div>
+                <div class="bottommenu-item">API</div>
+                <div class="bottommenu-item">Privacy</div>
+                <div class="bottommenu-item">Terms</div>
+                <div class="bottommenu-item">Top Accounts</div>
+                <div class="bottommenu-item">Hashtags</div>
+                <div class="bottommenu-item">Locations</div>
+                <div class="bottommenu-item">Instagram Lite</div>
+              </div>
+
+              <div id="bottomnav">
+                <language>English  <i class="down-arrow"></i></language> © 2021 pIestagram from e-Pies
+              </div>
+            </footer>
+    </div>
+  
  <script>
 var myScreenOrientation = window.screen.orientation;
 myScreenOrientation.lock("portrait"); 
