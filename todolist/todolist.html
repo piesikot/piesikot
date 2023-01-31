@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo list</title>
+</head>
+<style>
+*{
+    font-family: fantasy;
+}
+
+    h1{
+        font-size: 5vw;
+    }
+    nav{
+        position: absolute;
+        top:-10px;
+        right: 10px;
+        text-align: center;
+    }
+    .new-task{
+        font-size: 2vmax;
+        margin-bottom: 10px;
+    }
+    input{
+        width: 25vw;
+        height: 30px;
+        display: block;
+    }
+  
+    button{
+        margin-top: 10px;   
+    }
+
+    .to-do-list{
+        font-size: 3vw;
+        max-width: 50%;
+
+        margin-left: 10px;
+    }
+
+    .task-deletion::after{
+        content: 'x';
+        color: red;
+        margin-left: 5px;
+        cursor: pointer;
+        font-size: 1.5em;
+    }
+
+</style>
+<body>
+    <nav>
+    <p class="new-task">New task</p>
+    <input class="task" type="text">
+    <button class="add-task-button" >Add task</button>
+    </nav>
+
+    <div class="list-container">
+        <h1>To do list:</h1>
+            <ol class="to-do-list">
+        </ol>
+    </div>
+
+    <script>
+        const addTaskButton = document.querySelector('.add-task-button');
+        const toDoList = document.querySelector('.to-do-list')
+
+        addTaskButton.addEventListener("click", function() {
+            
+            const newTask = document.createElement('li');
+            const taskValue = document.querySelector('.task').value
+            const createNewTask = document.createTextNode(taskValue);
+            const taskDeletion = document.createElement('span');
+
+            newTask.appendChild(createNewTask);
+            newTask.appendChild(taskDeletion);
+            toDoList.appendChild(newTask);
+            taskDeletion.setAttribute("class", "task-deletion");
+            
+            taskDeletion.addEventListener("click", function(){
+                newTask.remove();
+            })
+
+        })
+    </script>
+</body>
+</html>
