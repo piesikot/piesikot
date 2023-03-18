@@ -813,8 +813,16 @@ function nyanStart() {
 
         }
         
+        const bon = document.querySelector('#cat');
 
-
+        bon.oncontextmenu = rightClick;
+  
+        function rightClick(clickEvent) {
+            clickEvent.preventDefault();
+            //bongocatDown() { return false}
+            // return false;
+            document.getElementById("bongo").src = "src/bongocat-rmb.gif"
+        }
 </script>
 </body>
 </html>
