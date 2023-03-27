@@ -619,8 +619,8 @@ refractoring jednak na vw i vh?
                 </button>
                 <div id="projects-dropbtn-underline"></div>
                 <div class="projects-dropdown-content">
-                    <a href="pIestagram/pIestagram.html"><li id="pIestagram" class="project-underline">pIestagram</li></a>
-                    <a href="todolist/todolist.html"><li id="todolist" class="project-underline">To do list</li></a>
+                    <a href="pIestagram.html"><li id="pIestagram" class="project-underline">pIestagram</li></a>
+                    <a href="todolist.html"><li id="todolist" class="project-underline">To do list</li></a>
                     <!--  ../  -->
               </div> 
             </div>
@@ -632,7 +632,7 @@ refractoring jednak na vw i vh?
         -->
 
         <header>
-            <h2 onmouseenter="emilEnter()" onmouseleave="emilLeave()">Emil</h2>
+            <h2>Emil</h2>
             <h1 onmouseenter="piesikotEnter()" onmouseleave="piesikotLeave()">Pies<span id="i">i</span><span class="kot">k<span id="ot1" class="kot">ot</span></span> 
             </h1>
             <p><span id="ot2">ot</span><span class="dot">.</span >co</span>
@@ -712,16 +712,6 @@ refractoring jednak na vw i vh?
 
     function navprojectsLeave(){
         document.getElementById("projects-arrow").style.transform = "rotate(0turn)";
-    }
-
-    function emilEnter(){
-        document.getElementById("i").style.margin = "0px 10px 0px 10px";
-        document.getElementById("i").style.transition = "3s";
-    }
-
-    function emilLeave(){
-        document.getElementById("i").style.margin = "0px 0px 0px 0px";
-        document.getElementById("i").style.transition = "3s";
     }
 
         function piesikotEnter(){
