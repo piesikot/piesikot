@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+    <title>Pies i kot</title>
+</head>
+
+<style>
+#top-bar{
+    display: flex;
+    justify-content:space-between
+}
+
+header{
+    display: flex;
+   
+}
+
+footer{
+    display: flex;
+    justify-content:space-between;
+    align-items: flex-end;
+}
+
+#copyright{
+    
+}
+</style>
+
+<body>
+    <div id="container">
+        <nav id="top-bar">  
+            <nav id="nav-cats" onmouseenter="navcatsEnter()" onmouseleave="navcatsLeave()"> 
+                <div class="cats-dropdown">
+                  <button class="cats-dropbtn" >Change cat <img id="cat-arrow" src="src/south.svg" alt="">
+                  </button>
+                  <div id="cat-dropbtn-underline"></div>
+                  <div class="cats-dropdown-content" onmouseenter="catsdropdowncontentEnter()" >
+                    <li id="text_cat" class="cat-underline">Text cat</li>
+                    <li id="invertocat" class="cat-underline">Invertocat</li>
+                    <li id="bongo_cat" class="cat-underline">Bongo Cat</li>
+                    <li id="disneys_stitch" class="cat-underline">Disney's Stitch</li>
+                    <li id="nyan_cat" class="cat-underline">Nyan Cat</li>
+                    </div> 
+              </div>
+            </nav>
+        
+            <nav id="nav-projects" onmouseenter="navcprojectsEnter()" onmouseleave="navprojectsLeave()" >
+                <div class="projects-dropdown">
+                    <button class="projects-dropbtn"><img id="projects-arrow" src="src/south.svg" alt=""> Projects
+                    </button>
+                    <div id="projects-dropbtn-underline">
+                    </div>
+                    <div class="projects-dropdown-content">
+                        <a href="pIestagram.html"><li id="pIestagram" class="project-underline">pIestagram</li></a>
+                        <a href="todolist.html"><li id="todolist" class="project-underline">To do list</li></a>
+                        <!--  ../  -->
+                    </div> 
+                </div>
+            </nav>
+        </nav>
+
+        <!--
+        <iframe src="todolist/todolist.html " title="whatever" frameBorder="0" style="margin-top: 50px;">
+        </iframe>
+        -->
+
+        <header>
+            <h2>Emil</h2>
+
+            <h1 onmouseenter="piesikotEnter()" onmouseleave="piesikotLeave()">Pies<span id="i">i</span><span class="kot">k<span id="ot1" class="kot">ot</span></span> 
+            </h1>
+
+            <p><span id="ot2">ot</span><span class="dot">.</span >co</span>
+            </p>
+            
+        </header>
+
+        <main>
+
+        </main>
+        
+        <footer>
+                
+                <img id="dog" src="src/e-Pies.svg" alt="e-Pies Logo">
+
+                <span id="copyright">Just cat made from text.</span>
+
+                <div id="kot" onmouseenter="piesikotEnter()"              onmouseleave="piesikotLeave()">
+                </div>  
+
+                <div id="cat">
+                    <span id="text-cat">/ᐠ..ᐟ\</span>
+                </div>
+            
+            
+                
+        </footer>
+    </div>
+
+    <audio id="myAudio">
+        <source src="src/nyanaudio.mp3" type="audio/mpeg">
+    </audio>
+</body>
