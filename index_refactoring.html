@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
@@ -8,27 +8,74 @@
 </head>
 
 <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+html, body{
+    height:100%;
+    
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
 #top-bar{
     display: flex;
-    justify-content:space-between
+    /* align-self: flex-start; */
+    justify-content: space-between;
+}
+
+.cats-dropdown-content, .projects-dropdown-content{
+    display: none;
 }
 
 header{
     display: flex;
-   
-}
-
-footer{
-    display: flex;
-    justify-content:space-between;
-    align-items: flex-end;
-}
-
-#copyright{
+    flex-direction: column;
+    align-items: center;
+    /* font-size: ; */
+    /* hmm if not vh and vw, then what? */
+    margin: auto;
     
 }
-</style>
 
+h1{
+    /* margin: -5vw 0 -5vw 0; */
+}
+
+ footer{
+    display: flex;
+    justify-content:center;
+}
+
+#logo{
+    position: absolute; 
+    bottom: 0;
+    left: 10px;
+    /* left 10px; */
+    height: 30vh;
+    /* width: 50vw; */
+} 
+.emptydiv, #copyright, .cat{
+/* justify-content: center; */
+}
+#copyright{
+
+}
+
+#cat{
+    position:absolute;
+    bottom: 0;
+    right: 10px;
+}
+.emptydiv{
+    /* is it bad practice? */
+}
+</style>
 <body>
     <div id="container">
         <nav id="top-bar">  
@@ -44,7 +91,7 @@ footer{
                     <li id="disneys_stitch" class="cat-underline">Disney's Stitch</li>
                     <li id="nyan_cat" class="cat-underline">Nyan Cat</li>
                     </div> 
-              </div>
+                </div>
             </nav>
         
             <nav id="nav-projects" onmouseenter="navcprojectsEnter()" onmouseleave="navprojectsLeave()" >
@@ -56,7 +103,7 @@ footer{
                     <div class="projects-dropdown-content">
                         <a href="pIestagram.html"><li id="pIestagram" class="project-underline">pIestagram</li></a>
                         <a href="todolist.html"><li id="todolist" class="project-underline">To do list</li></a>
-                        <!--  ../  -->
+                         <!-- ../  -->
                     </div> 
                 </div>
             </nav>
@@ -79,22 +126,23 @@ footer{
         </header>
 
         <main>
-
         </main>
         
         <footer>
                 
-                <img id="dog" src="src/e-Pies.svg" alt="e-Pies Logo">
+            <img id="logo" src="src/e-Pies.svg" alt="e-Pies Logo">
+            
+            <!-- <div class="emptydiv"></div> -->
+              
+            <span id="copyright">Just cat made from text.</span>
 
-                <span id="copyright">Just cat made from text.</span>
-
-                <div id="kot" onmouseenter="piesikotEnter()"              onmouseleave="piesikotLeave()">
-                </div>  
-
+            <div id="kot" 
+            onmouseenter="piesikotEnter()" 
+            onmouseleave="piesikotLeave()">
                 <div id="cat">
                     <span id="text-cat">/ᐠ..ᐟ\</span>
                 </div>
-            
+            </div> 
             
                 
         </footer>
