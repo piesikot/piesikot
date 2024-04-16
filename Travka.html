@@ -17,24 +17,47 @@
         flex-direction: column;
         justify-content: center;
         height: 100%;
-        padding: 18px;
         text-align: center;
     }
     .logo{
-        width: 40vw;
+        width: 20em;
         margin: 21.280px 0 ;
     }
     h2,h3{
         color: #fff004;
         font-family:fantasy;
     }
+    .fblink-container{
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+    }
+    .fblink-container__fblogo{
+        width: 2.5em;
+        padding-right: 10px;
+  
+    }
+    .fblink-container__fblink{
+        font-size: 2em;
+        text-decoration:none;
+    }
+    a{
+        text-decoration: none; 
+    }
+
 </style>
 <body>
     <div class="container">
             <img class="logo" src="travka/Travka-transparent.png" alt="Travka's logo">
             <h2>Stay tuned! Już niedługo!</h2>
             <h3>Sklep z trawą i kamieniami. Nie tylko dla wegan.</h3>
+            <a href="https://www.facebook.com/profile.php?id=100071199002290"><div class="fblink-container"> 
+                <img class="fblink-container__fblogo" src="e-pies/fblogo.png" alt="Facebook's logo" > 
+                 <span class="fblink-container__fblink">Travka</span>
+             </div>
+             </a> 
             <!-- <h4>Stacjonarnie oraz internetowo.<h4> -->
     </div>
+    
 </body>
 </html>
