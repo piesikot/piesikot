@@ -25,15 +25,33 @@ li{
     font-weight: 600;
     margin-bottom: 20px;
 }
+button{font-weight: 600;
+}
+.question_container{
+    padding: 10px;
+}
+.human_question, .animal_question{
+   -webkit-transition: opacity .5s ease-in-out;
+   -moz-transition: opacity .5s ease-in-out;
+   -ms-transition: opacity .5s ease-in-out;
+   -o-transition: opacity .5s ease-in-out;
+   transition: opacity .5s ease-in-out;
+}
+.human_question{
+    opacity: 1;
+}
+.animal_question{
+    opacity: 1;
+    display: none;
+    margin-top: -40px;
+}
 footer{
     display: flex;
     justify-content: center;
-    padding: 30px 0 0 0;
-}
-.human_question{
-    padding: 10px;
+    padding: 60px 0 0 0;
 }
 </style>
+
 <body>
     <header>
         <img class="logo" src="racism/human_liberation.png" alt="Human Lberation Symbol">
@@ -172,11 +190,9 @@ footer{
                 It's Impossible To Be 100% Tolerant
             </div>
             <div class="fallacy-description">
-                The philosophy of tolerance is flawed because tolerating every person is impossible.
+                The philosophy of tolerance is flawed because tolerating every single person is impossible.
             </div>
         </li>
-        
-        
     <!--<li> <div class="fallacy-title">
 
             </div>
@@ -185,18 +201,24 @@ footer{
             </div>
         </li>    -->
     </ol>
-    <div class="human_question">
-        Do you feel outraged when reading these arguments about racism? Do you consider them unethical and absurd, and you think that such type of reasoning should not be tolerated and applied to living beings, especially innocent ones? If so, click this button: <button class="human_liberation"><b>Human Liberation</b></button>
+    <div class="question_container">
+        <div class="human_question">
+            Do you feel outraged when reading these arguments about racism? Do you consider them unethical and absurd, and you think that such type of reasoning should not be tolerated and applied to living beings, especially innocent ones? If so, click this button: <button class="human_liberation">Human Liberation</button>
+        </div>
+        <div class="animal_question">Well, in fact, these arguments mirror the most commonly used arguments by speciesists and carnists, where the word "animals" has been substituted with the words "other races". By drawing parallels between racism and speciesism, the intention is to highlight the absurdity and ethical inconsistency of such reasoning, urging individuals to reassess their attitudes and behaviors towards non-human animals, because speciesism is not different from racism. If you agree that speciesism is ethically as wrong as racism and you want to stand against, you can click this buton <button id="animal_liberation">Animal Liberation</button>
+        </div>  
     </div>
     <footer>Website created by Emil Piesik</footer>
+
 <script>
 const humanLiberationButton = document.querySelector('.human_liberation');
 const humanLiberation = document.querySelector('.human_question');
+const animalLiberationButton = document.querySelector('animal_liberation');
+const animalLiberation = document.querySelector('.animal_question');
 
 humanLiberationButton.addEventListener('click', (event) => {
-    humanLiberation.innerHTML = 'Well, in fact, these arguments mirror the most commonly used arguments by speciesists and carnists, where the word "animals" has been substituted with the words "other races". By drawing parallels between racism and speciesism, the intention is to highlight the absurdity and ethical inconsistency of such reasoning, urging individuals to reassess their attitudes and behaviors towards non-human animals, because speciesism is not different from racism.'
-
-    //If you agree that speciesism is ethically as wrong as racism and you want to stand against, you can click this buton <button id="animal_liberation"><b>Animal Liberation</b></button>
+    humanLiberation.style.opacity = 0;
+    animalLiberation.style.display ='block';    
 });
 
 </script>
