@@ -10,16 +10,26 @@ header{
     display: flex;
     justify-content:space-between;
     align-items: center;
+    padding: 10px 10px 50px 10px;
 }
 .logo{
     width: 50px;
 }
+.language{
+    width: 60px;
+}
 h1{
     text-align: center;
 }
+#vegan-h1, #excuse-h1{
+    display: none;
+}
+#veganism-fallacies{
+    display: none;
+}
 li{
     padding: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 70px;
     }
 .fallacy-title{
     font-weight: 600;
@@ -28,7 +38,7 @@ li{
 button{font-weight: 600;
 }
 .question_container{
-    padding: 10px;
+    padding: 50px 10px 50px 10px;
 }
 .human_question, .animal_question{
    -webkit-transition: opacity .5s ease-in-out;
@@ -53,13 +63,13 @@ footer{
 }
 @media screen and (max-width: 900px) {
   .animal_question{
-    margin-top: -60px;
+    margin-top: -50px;
   }
 }
 @media screen and (max-width: 700px) {
 
   .animal_question{
-    margin-top: -80px;
+    margin-top: -75px;
   }
 }
 @media screen and (max-width: 400px) {
@@ -73,11 +83,16 @@ footer{
 <body>
     <header>
         <img class="logo" src="racism/human_liberation.png" alt="Human Lberation Symbol">
-        <h1>Your Racism Fallacy Is:</h1>
+        <!-- <img class="logo" src="racism/animal_liberation.png" alt="Human Lberation Symbol">  -->
+        <h1 id="rasism-h1">Your Racism Fallacy Is:</h1>
+        <h1 id="vegan-h1">Your Vegan Fallacy Is:</h1>
+        <h1 id="excuse-h1">Your Excuse Against Veganism Is:</h1>
         <div class="language"></div>
+        <!-- logo2 -->
+        
     </header>
-    </div>
-    <ol class="fallacies">
+<!-- Racism Fallacies -->
+    <ol id="racism-fallacies">
         <li>
             <div class="fallacy-title">Other Races Are Not Intelligent Enough to Worry About
             </div>
@@ -210,7 +225,146 @@ footer{
             <div class="fallacy-description">
                 The philosophy of tolerance is flawed because tolerating every single person is impossible.
             </div>
+    </ol>
+<!-- Veganism Fallacies -->
+    <ol id="veganism-fallacies">
+        <li> 
+            <div class="fallacy-title">
+                Other Species Are Not Intelligent Enough to Worry About
+            </div>
+            <div class="fallacy-description">
+                Other species are not as intelligent and emotionally developed as my race, so killing them and causing them pain is acceptable.
+            </div>
         </li>
+        <li> 
+            <div class="fallacy-title">
+                Other Species Eat Other Species, So I Can Too
+            </div>
+            <div class="fallacy-description">
+                Because other species eat other species, there is nothing wrong with us eating other species, imprisoning or exploiting them.
+            </div>
+        </li>
+        <li> 
+            <div class="fallacy-title">
+                This Is My Personal Choice.
+            </div>
+            <div class="fallacy-description">
+                Not being vegan, just as being vegan is a personal choice, so everyone should live and let live.
+            </div>
+        </li>
+        <li> 
+            <div class="fallacy-title">
+                Interspecies Killing Is Natural
+            </div>
+            <div class="fallacy-description">
+                Humans evolved as meat eaters so killing animals is natural for us.
+            </div>
+        </li>
+        <li> 
+            <div class="fallacy-title">
+                Being Vegan Is Too Difficult
+            </div>
+            <div class="fallacy-description">
+                Being vegan is too difficult and complicated for the average person, so it is unreasonable to expect everyone not to be carnist.
+            </div>
+        </li>
+        <li> 
+            <div class="fallacy-title">
+                Being Vegan Changes Nothing
+            </div>
+            <div class="fallacy-description">
+                Not being a carnist changes nothing because there will always be other carnists in the world, so what's the point?
+            </div>
+        </li>
+        <li> 
+            <div class="fallacy-title">
+                I Don't Have To Be Vegan To Love Animals
+            </div>
+            <div class="fallacy-description">
+                I love animals enough to fulfill their needs while they're alive, but I also understand that sometimes they need to be killed to satisfy my needs. So there is no conflict between loving animals and killing them.
+            </div>
+        </li>
+        <li> 
+            <div class="fallacy-title">
+                I Honor The Animals  I Eat
+            </div>
+            <div class="fallacy-description">
+                I honor the animals I eat with my hunting and farming practices for their sacrifice.
+            </div>
+        </li>
+        <li> 
+            <div class="fallacy-title">
+                I Eat Animals Killed Only In A Humane Way
+            </div>
+            <div class="fallacy-description">
+                It's important for animals to be treated well, so I only eat animals killed in a way that is free from suffering, and death is quick and humane.
+            </div>
+        </li>
+        <li> 
+            <div class="fallacy-title">
+                My Species Is The Dominant Species
+            </div>
+            <div class="fallacy-description">
+                Other species are genetically inferior to mine, so killing them and causing them pain is acceptable. From an evolutionary standpoint, only my species has the right to live.
+            </div>
+        </li>
+        <li> 
+            <div class="fallacy-title">
+                My Religion Allows Me To Kill Other Beings
+            </div>
+            <div class="fallacy-description">
+                Religion is my moral compass, which gives me the right to kill animals..
+            </div>
+        </li>
+        <li> 
+            <div class="fallacy-title">
+                Our Ancestors Ate Meat
+            </div>
+            <div class="fallacy-description">
+                Our ancestors have been eating animals and enslaving them since the beginning of their existence, so it's good to continue this.
+            </div>
+        </li>
+        <li> 
+            <div class="fallacy-title">
+                Our Tradition Allows Or Mandates Killing Other Beings
+            </div>
+            <div class="fallacy-description">
+                Because my culture or tradition allows or mandates it, morally I have a choice or I am obligated to kill animals.
+            </div>
+        </li>
+        <li> 
+            <div class="fallacy-title">
+                Veganism Is Brainwashing
+            </div>
+            <div class="fallacy-description">
+                Raising children in veganism is brainwashing because children are too young to make significant decisions on this topic. Children have the right to be carnist, so forcing veganism and compassion on them is unethical.
+            </div>
+        </li>
+        <li> 
+            <div class="fallacy-title">
+                Veganism Is Just A Passing Fad
+            </div>
+            <div class="fallacy-description">
+                Veganism is just another fad that will soon pass, like all the previous ones.
+            </div>
+        </li>
+        <li> 
+            <div class="fallacy-title">
+                Vegans Would Eat Meat On A Desert Island
+            </div>
+            <div class="fallacy-description">
+                There are situations in which people who are not carnist would animals if they had no other choice.
+            </div>
+        </li>
+        <li> 
+            <div class="fallacy-title">
+                It's Impossible To Be 100% Vegan
+            </div>
+            <div class="fallacy-description">
+                The philosophy of veganism is flawed because there is no way to not to kill any being.
+            </div>
+        </li>       
+    </ol>
     <!--<li> <div class="fallacy-title">
 
             </div>
@@ -218,7 +372,6 @@ footer{
 
             </div>
         </li>    -->
-    </ol>
     <div class="question_container">
         <div class="human_question">
             Do you feel outraged when reading these arguments about racism? Do you consider them unethical and absurd, and you think that such type of reasoning should not be tolerated and applied to living beings, especially innocent ones? If so, click this button: <button class="human_liberation">Human Liberation</button>
