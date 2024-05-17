@@ -37,20 +37,20 @@ li{
 }
 button{font-weight: 600;
 }
-.question_container{
+.question-container{
     padding: 50px 10px 50px 10px;
 }
-.human_question, .animal_question{
+.human-question, .animal-question{
    -webkit-transition: opacity .5s ease-in-out;
    -moz-transition: opacity .5s ease-in-out;
    -ms-transition: opacity .5s ease-in-out;
    -o-transition: opacity .5s ease-in-out;
    transition: opacity .5s ease-in-out;
 }
-.human_question{
+.human-question{
     opacity: 1;
 }
-.animal_question{
+.animal-question{
     opacity: 1;
     display: none;
     margin-top: -40px;
@@ -61,19 +61,22 @@ footer{
     text-align: center;
     padding: 60px 0 0 0;
 }
+#copyright{
+    margin-top: 5px;
+}
 @media screen and (max-width: 900px) {
-  .animal_question{
+  .animal-question{
     margin-top: -50px;
   }
 }
 @media screen and (max-width: 700px) {
 
-  .animal_question{
+  .animal-question{
     margin-top: -75px;
   }
 }
 @media screen and (max-width: 400px) {
-  .animal_question{
+  .animal-question{
     margin-top: -100px;
   }
 }
@@ -372,22 +375,23 @@ footer{
 
             </div>
         </li>    -->
-    <div class="question_container">
-        <div class="human_question">
+    <div class="question-container">
+        <div class="human-question">
             Do you feel outraged when reading these arguments about racism? Do you consider them unethical and absurd, and you think that such type of reasoning should not be tolerated and applied to living beings, especially innocent ones? If so, click this button: <button class="human_liberation">Human Liberation</button>
         </div>
-        <div class="animal_question">Well, in fact, these arguments mirror the most commonly used arguments by speciesists and carnists, where the word "animals" has been substituted with the words "other races". By drawing parallels between racism and speciesism, the intention is to highlight the absurdity and ethical inconsistency of such reasoning, urging individuals to reassess their attitudes and behaviors towards non-human animals, because speciesism is not different from racism. <!-- If you agree that speciesism is ethically as wrong as racism and you want to stand against, you can click this buton <button id="animal_liberation">Animal Liberation</button> -->
+        <div class="animal-question">Well, in fact, these arguments mirror the most commonly used arguments by speciesists and carnists, where the word "animals" has been substituted with the words "other races". By drawing parallels between racism and speciesism, the intention is to highlight the absurdity and ethical inconsistency of such reasoning, urging individuals to reassess their attitudes and behaviors towards non-human animals, because speciesism is not different from racism. <!-- If you agree that speciesism is ethically as wrong as racism and you want to stand against, you can click this buton <button id="animal_liberation">Animal Liberation</button> -->
         </div>  
     </div>
     <footer>
-        <span>Website has been inspired by yourveganfallacyis.com and some very nice people from all over the world ;) <br>Created by Emil Piesik</span>
+        <span>Website got inspiration from yourveganfallacyis.com and some very nice people from all over the world ;) <div id="copyright">Created by Emil Piesik</div></span>
         </footer>
 
 <script>
 const humanLiberationButton = document.querySelector('.human_liberation');
-const humanLiberation = document.querySelector('.human_question');
+const humanLiberation = document.querySelector('.human-question');
+const racismFallacies = document.querySelector('.racism_fallacies');
 const animalLiberationButton = document.querySelector('animal_liberation');
-const animalLiberation = document.querySelector('.animal_question');
+const animalLiberation = document.querySelector('.animal-question');
 
 humanLiberationButton.addEventListener('click', (event) => {
     humanLiberation.style.opacity = 0;
