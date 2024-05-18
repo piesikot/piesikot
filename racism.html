@@ -12,14 +12,15 @@ header{
     align-items: center;
     padding: 10px 10px 50px 10px;
 }
-.logo{
+.liberation-logo img{
     width: 50px;
 }
 .language{
-    width: 60px;
+    width: 80px;
 }
 h1{
     text-align: center;
+    padding: 20px;
 }
 #vegan-h1, #excuse-h1{
     display: none;
@@ -70,7 +71,6 @@ footer{
   }
 }
 @media screen and (max-width: 700px) {
-
   .animal-question{
     margin-top: -75px;
   }
@@ -80,13 +80,12 @@ footer{
     margin-top: -100px;
   }
 }
-
 </style>
-
 <body>
     <header>
-        <img class="logo" src="racism/human_liberation.png" alt="Human Lberation Symbol">
-        <!-- <img class="logo" src="racism/animal_liberation.png" alt="Human Lberation Symbol">  -->
+        <div class="liberation-logo"><img src="racism/human_liberation.png" alt="Human Lberation Symbol"></div>
+        <!-- <img src="racism/animal_liberation.png" alt="Human Lberation Symbol">  -->
+        <!-- <img class="logo" src="racism/animal-liberation-human-liberation-symbol.png" alt="Human Lberation Symbol"> -->
         <h1 id="rasism-h1">Your Racism Fallacy Is:</h1>
         <h1 id="vegan-h1">Your Vegan Fallacy Is:</h1>
         <h1 id="excuse-h1">Your Excuse Against Veganism Is:</h1>
@@ -268,7 +267,7 @@ footer{
                 Being Vegan Is Too Difficult
             </div>
             <div class="fallacy-description">
-                Being vegan is too difficult and complicated for the average person, so it is unreasonable to expect everyone not to be carnist.
+                Being vegan is too difficult and complicated for the average person, so it is unreasonable to expect everyone not to be speciesist.
             </div>
         </li>
         <li> 
@@ -379,7 +378,7 @@ footer{
         <div class="human-question">
             Do you feel outraged when reading these arguments about racism? Do you consider them unethical and absurd, and you think that such type of reasoning should not be tolerated and applied to living beings, especially innocent ones? If so, click this button: <button class="human_liberation">Human Liberation</button>
         </div>
-        <div class="animal-question">Well, in fact, these arguments mirror the most commonly used arguments by speciesists and carnists, where the word "animals" has been substituted with the words "other races". By drawing parallels between racism and speciesism, the intention is to highlight the absurdity and ethical inconsistency of such reasoning, urging individuals to reassess their attitudes and behaviors towards non-human animals, because speciesism is not different from racism. <!-- If you agree that speciesism is ethically as wrong as racism and you want to stand against, you can click this buton <button id="animal_liberation">Animal Liberation</button> -->
+        <div class="animal-question">Well, in fact, these arguments mirror the most commonly used arguments by speciesists and carnists, where the word "animals" has been substituted with the words "other races". By drawing parallels between racism and speciesism, the intention is to highlight the absurdity and ethical inconsistency of such reasoning, urging individuals to reassess their attitudes and behaviors towards non-human animals, because speciesism is not different from racism. <!-- If you agree that speciesism is ethically as wrong as racism and you want to stand against it, you can click this buton <button id="animal_liberation">Animal Liberation</button> -->
         </div>  
     </div>
     <footer>
@@ -389,13 +388,18 @@ footer{
 <script>
 const humanLiberationButton = document.querySelector('.human_liberation');
 const humanLiberation = document.querySelector('.human-question');
-const racismFallacies = document.querySelector('.racism_fallacies');
+const racismFallacies = document.querySelector('#racism-fallacies');
+const veganismFallacies = document.querySelector('#veganism-fallacies');
 const animalLiberationButton = document.querySelector('animal_liberation');
 const animalLiberation = document.querySelector('.animal-question');
+const liberationLogo = document.querySelector('.liberation-logo')
 
 humanLiberationButton.addEventListener('click', (event) => {
     humanLiberation.style.opacity = 0;
-    animalLiberation.style.display ='block';    
+    animalLiberation.style.display ='block'; 
+    racismFallacies.style.display ='none';
+    veganismFallacies.style.display ='block';
+    liberationLogo.innerHTML = '<img src="racism/animal_liberation.png" alt="Human Lberation Symbol">   ';
 });
 
 </script>
