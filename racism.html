@@ -3,9 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Racism Fallacy</title>
+    <title>Your Fallacy</title>
 </head>
 <style>
+@font-face {
+  font-family: Montserrat;
+  src: url(src/Montserrat-VariableFont_wght.ttf);
+}
+body{    
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+}
 header{
     display: flex;
     justify-content:space-between;
@@ -84,13 +91,9 @@ footer{
 <body>
     <header>
         <div class="liberation-logo"><img src="racism/human_liberation.png" alt="Human Lberation Symbol"></div>
-        <!-- <img src="racism/animal_liberation.png" alt="Human Lberation Symbol">  -->
         <!-- <img class="logo" src="racism/animal-liberation-human-liberation-symbol.png" alt="Human Lberation Symbol"> -->
         <h1 id="rasism-h1">Your Racism Fallacy Is:</h1>
-        <!-- <h1 id="excuse-h1">Your Excuse Against Veganism Is:</h1> -->
-        <div class="language"></div>
-        <!-- logo2 -->
-        
+        <div class="language"></div>        
     </header>
 <!-- Racism Fallacies -->
     <ol id="racism-fallacies">
@@ -366,6 +369,7 @@ footer{
             </div>
         </li>       
     </ol>
+<!-- New fallacy template -->
     <!--<li> <div class="fallacy-title">
 
             </div>
@@ -377,14 +381,12 @@ footer{
         <div class="human-question">
             Do you feel outraged when reading these arguments about racism? Do you consider them unethical and absurd, and you think that such type of reasoning should not be tolerated and applied to living beings, especially innocent ones? If so, click this button: <button class="human_liberation">Human Liberation</button>
         </div>
-        <div class="animal-question">Well, in fact, these arguments mirror the most commonly used arguments by speciesists against veganism, where the word "animals" has been substituted with the words "other races". By drawing parallels between racism and speciesism, the intention is to highlight the absurdity and ethical inconsistency of such reasoning, urging individuals to reassess their attitudes and behaviors towards non-human animals, because speciesism is not different from racism. <!--If you agree that speciesism is ethically as wrong as racism and you want to stand agains this oppression, you can click this buton <button id="animal_liberation">Animal Liberation</button>, however if you for some reason can't go vegan, be sure to choose an ethical and local option, by clicking this button: <button>Elwood's meat</button>. -->
- 
+        <div class="animal-question">Well, in fact, these arguments mirror the most commonly used arguments by speciesists against veganism, where the word "animals" has been substituted with the words "other races". By drawing parallels between racism and speciesism, the intention is to highlight the absurdity and ethical inconsistency of such reasoning, urging individuals to reassess their attitudes and behaviors towards non-human animals, because speciesism is not different from racism. 
         </div>  
     </div>
     <footer>
         <span>Website got inspiration from yourveganfallacyis.com and some very nice people from all over the world ;) <div id="copyright">Created by Emil Piesik</div></span>
         </footer>
-
 <script>
 const humanLiberationButton = document.querySelector('.human_liberation');
 const humanLiberation = document.querySelector('.human-question');
@@ -394,7 +396,6 @@ const animalLiberationButton = document.querySelector('animal_liberation');
 const animalLiberation = document.querySelector('.animal-question');
 const liberationLogo = document.querySelector('.liberation-logo')
 const h1 = document.querySelector('h1')
-
 humanLiberationButton.addEventListener('click', (event) => {
     humanLiberation.style.opacity = 0;
     animalLiberation.style.display ='block'; 
@@ -403,7 +404,6 @@ humanLiberationButton.addEventListener('click', (event) => {
     liberationLogo.innerHTML = '<img src="racism/animal_liberation.png" alt="Human Lberation Symbol">   ';
     h1.textContent = 'Your Vegan Fallacy Is:'
 });
-
 </script>
 </body>
 </html>
