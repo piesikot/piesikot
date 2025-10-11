@@ -1,6 +1,6 @@
 # Pies i kot — piesikot...co?
 
- ## *Emil Piesik* ot co!
+## _Emil Piesik_ ot co!
 
 Moje portfolio projektów webowych.
 
@@ -23,23 +23,19 @@ Ponadto wszystkie koty na stronie nie są moją własnością, bo to człowiek j
 
 Strona zawiera interaktywne elementy, np. w postaci tekstowego kota, który ukrywa się w prawym dolnym rogu strony. Żeby kot się ujawnił, wystarczy go pogłaskać kursorem lub palcem (w przypadku ekranów dotykowych). Poza tym, z niektórymi z kotów można wchodzić w interakcje także za pomocą przycisków.
 
-\*oprócz wegańskich easter eggsów ;) 
+\*oprócz wegańskich easter eggsów ;)
 
 ## Projekty
 
 ### Todo List
 
 #### O projekcie
-Mój pierwszy, bardzo prosty projekt webowy.  Aplikacja pozwala użytkownikowi dodawać i usuwać zadania w przejrzystej liście. Projekt jest minimalistyczny, responsywny i dostępny online w wersji live pod tym [tym adresem](https://piesikot.co/todolist.html).
+
+Mój pierwszy, bardzo prosty projekt webowy. Aplikacja pozwala użytkownikowi dodawać i usuwać zadania w przejrzystej liście. Projekt jest minimalistyczny, responsywny i dostępny online w wersji live pod tym [tym adresem](https://piesikot.co/todolist.html).
 
 #### Technologie
-HTML5 – struktura strony.
 
-CSS3 – proste style, responsywne jednostki (vw, vmax), dopasowanie do różnych ekranów.
-
-Vanilla JavaScript – obsługa zdarzeń (addEventListener), manipulacja DOM (createElement, appendChild, remove).
-
-Responsywność – dzięki jednostkom względnym strona dopasowuje się do rozdzielczości ekranu (desktop, tablet, mobile).
-
-
-
+- HTML5 – struktura strony.
+- CSS3 – proste style, responsywne jednostki (vw, vmax), dopasowanie do różnych ekranów.
+- Vanilla JavaScript – obsługa zdarzeń (addEventListener), manipulacja DOM (createElement, appendChild, remove).
+  Responsywność – dzięki jednostkom względnym strona dopasowuje się do rozdzielczości ekranu (desktop, tablet, mobile).

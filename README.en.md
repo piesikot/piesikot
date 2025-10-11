@@ -1,6 +1,6 @@
 # Dog and Cat — dogcat...what?
 
-## *Emil Piesik* that’s what!
+## _Emil Piesik_ that’s what!
 
 My portfolio of web projects.
 
@@ -11,7 +11,7 @@ My portfolio of web projects.
 
 ## About the site
 
-The site was created in a minimalist style, where figuratively and literally everything* is shown in black and white.
+The site was created in a minimalist style, where figuratively and literally everything\* is shown in black and white.
 
 - In the bottom left corner there is my logo, created from a photo of my late dog, Perełka, to which all rights are reserved.
 
@@ -24,3 +24,18 @@ Moreover, none of the cats on the site are my property, because it’s the human
 The site contains interactive elements, for example, a text-based cat hiding in the bottom right corner of the page. To make the cat reveal itself, just pet it with the cursor or your finger (on touchscreens). In addition, some of the cats can be interacted with using buttons.
 
 \*except for vegan Easter eggs ;)
+
+## Projects
+
+### Todo List
+
+#### About the project
+
+My first, very simple web project. The application allows the user to add and remove tasks in a clean and straightforward list. The project is minimalistic, responsive, and available online in a live version at [this address](https://piesikot.co/todolist.html).
+
+#### Technologies
+
+- HTML5 – page structure.
+- CSS3 – simple styling, responsive units (`vw`, `vmax`), adapting to different screen sizes.
+- Vanilla JavaScript – event handling (`addEventListener`), DOM manipulation (`createElement`, `appendChild`, `remove`).
+- Responsiveness – thanks to relative units, the page adjusts to various screen resolutions (desktop, tablet, mobile).
