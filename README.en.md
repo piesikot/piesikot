@@ -40,6 +40,16 @@ My first, very simple web project. The application allows the user to add and re
 - Vanilla JavaScript – event handling (`addEventListener`), DOM manipulation (`createElement`, `appendChild`, `remove`).
 - Responsiveness – thanks to relative units, the page adjusts to various screen resolutions (desktop, tablet, mobile).
 
+#### Credits
+
+- Invertocat is the GitHub logo, used in this project only as a social button to indicate that the project integrates with GitHub.
+
+- Bongo Cat was created by StrayRogue.
+
+- Stitch is a character from a Walt Disney cartoon.
+
+- Nyan Cat is a character created by Christopher Torres.
+
 ### racism.wtf
 
 #### About the Project
