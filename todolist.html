@@ -73,11 +73,11 @@
         newTask.appendChild(createNewTask);
         newTask.appendChild(taskDeletion);
         toDoList.appendChild(newTask);
-        taskDeletion.setAttribute("class", "task-deletion");  
+        taskDeletion.setAttribute("class", "task-deletion");
         taskDeletion.addEventListener("click", function () {
-          newTask.remove(); 
+          newTask.remove();
         });
-          if (taskValue === ''){
+        if (taskValue === "") {
           //alert("You're a slug!")
           newTask.textContent = "Do nothing, just chill ;)";
           newTask.appendChild(taskDeletion);

@@ -25,6 +25,16 @@ The site contains interactive elements, for example, a text-based cat hiding in 
 
 \*except for vegan Easter eggs ;)
 
+#### Credits
+
+- Invertocat is the GitHub logo, used in this project only as a social button to indicate that the project integrates with GitHub.
+
+- Bongo Cat was created by StrayRogue.
+
+- Stitch is a character from a Walt Disney cartoon.
+
+- Nyan Cat is a character created by Christopher Torres.
+
 ## Projects
 
 ### Todo List
@@ -39,16 +49,6 @@ My first, very simple web project. The application allows the user to add and re
 - CSS3 – simple styling, responsive units (`vw`, `vmax`).
 - Vanilla JavaScript – event handling (`addEventListener`), DOM manipulation (`createElement`, `appendChild`, `remove`).
 - Responsiveness – thanks to relative units, the page adjusts to various screen resolutions.
-
-#### Credits
-
-- Invertocat is the GitHub logo, used in this project only as a social button to indicate that the project integrates with GitHub.
-
-- Bongo Cat was created by StrayRogue.
-
-- Stitch is a character from a Walt Disney cartoon.
-
-- Nyan Cat is a character created by Christopher Torres.
 
 ### racism.wtf
 

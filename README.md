@@ -25,6 +25,13 @@ Strona zawiera interaktywne elementy, np. w postaci tekstowego kota, który ukry
 
 \*oprócz wegańskich easter eggsów ;)
 
+#### Uznanie autorstwa
+
+- Invertocat to logo GitHub, używane w projekcie wyłącznie jako przycisk społecznościowy, aby poinformować, że ten projekt jest zintegrowany z GitHubem.
+- Bongo Cat został utworzony przez StrayRogue.
+- Stich jest postacią z bajki wytwórni Walta Disneya.
+- Nyan Cat jest postacią, której autorem jest Christopher Torres.
+
 ## Projekty
 
 ### 1. Todo List
@@ -39,13 +46,6 @@ Mój pierwszy, bardzo prosty projekt webowy. Aplikacja pozwala użytkownikowi do
 - CSS3 – prosty, minimalistyczny styl, responsywne jednostki (vw, vmax).
 - Vanilla JavaScript – obsługa zdarzeń (addEventListener), manipulacja DOM (createElement, appendChild, remove).
   Responsywność – dzięki jednostkom względnym strona dopasowuje się do rozdzielczości ekranu.
-
-### Uznanie autorstwa
-
-- Invertocat to logo GitHub, używane w projekcie wyłącznie jako przycisk społecznościowy, aby poinformować, że ten projekt jest zintegrowany z GitHubem.
-- Bongo Cat został utworzony przez StrayRogue.
-- Stich jest postacią z bajki wytwórni Walta Disneya.
-- Nyan Cat jest postacią, której autorem jest Christopher Torres.
 
 ### 2. racism.wtf
 
