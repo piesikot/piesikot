@@ -36,9 +36,9 @@ Mój pierwszy, bardzo prosty projekt webowy. Aplikacja pozwala użytkownikowi do
 #### Technologie
 
 - HTML5 – struktura strony.
-- CSS3 – proste style, responsywne jednostki (vw, vmax), dopasowanie do różnych ekranów.
+- CSS3 – prosty, minimalistyczny styl, responsywne jednostki (vw, vmax).
 - Vanilla JavaScript – obsługa zdarzeń (addEventListener), manipulacja DOM (createElement, appendChild, remove).
-  Responsywność – dzięki jednostkom względnym strona dopasowuje się do rozdzielczości ekranu (desktop, tablet, mobile).
+  Responsywność – dzięki jednostkom względnym strona dopasowuje się do rozdzielczości ekranu.
 
 ### Uznanie autorstwa
 
@@ -62,15 +62,16 @@ Strona jest dostępna live pod adresem: [https://racism.wtf](https://racism.wtf)
 #### Technologie
 
 - HTML5 – struktura strony.
-- CSS – proste style, które podkreślają powagę tematu, bez zbędnych ozdobników, by nie odciągać uwagi od przekazu.
+- CSS5 – prosty styl, podkreślający powagę tematu, bez zbędnych ozdobników, by nie odciągać uwagi od przekazu.
 - Vanilla JavaScript – prosty skrypt obsługujący przycisk, który po kliknięciu ujawnia dodatkową treść strony.
 - Domena została dobrana tak, aby sama w sobie była częścią przekazu.
 
 #### Licencja
 
-Projekt udostępniany jest na licencji **MIT**.  
+Projekt udostępniany jest na licencji MIT.  
 Oznacza to, że można dowolnie korzystać, kopiować, modyfikować i rozpowszechniać ten kod, pod warunkiem zachowania informacji o autorze i licencji w plikach źródłowych.
 
 #### Uznanie autorstwa
 
-Logo ALF użyte w tym projekcie nie jest moją własnością. Wszelkie prawa należą do jego twórców/właścicieli. Zostało ono wykorzystane wyłącznie w celach ilustracyjnych.
+- Logo ALF użyte w tym projekcie nie jest moją własnością. Wszelkie prawa należą do jego twórców/właścicieli. Zostało ono wykorzystane wyłącznie w celach ilustracyjnych.
+- Projekty czerpie inspiracje od z [yourveganfallacyis.com](https://yourveganfallacyis.com/)

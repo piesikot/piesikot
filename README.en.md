@@ -36,9 +36,9 @@ My first, very simple web project. The application allows the user to add and re
 #### Technologies
 
 - HTML5 – page structure.
-- CSS3 – simple styling, responsive units (`vw`, `vmax`), adapting to different screen sizes.
+- CSS3 – simple styling, responsive units (`vw`, `vmax`).
 - Vanilla JavaScript – event handling (`addEventListener`), DOM manipulation (`createElement`, `appendChild`, `remove`).
-- Responsiveness – thanks to relative units, the page adjusts to various screen resolutions (desktop, tablet, mobile).
+- Responsiveness – thanks to relative units, the page adjusts to various screen resolutions.
 
 #### Credits
 
@@ -69,11 +69,10 @@ The site is available live at: [https://racism.wtf](https://racism.wtf)
 
 #### License
 
-This project is released under the **MIT License**.  
+This project is released under the MIT License.  
 This means you are free to use, copy, modify, and distribute this code, provided that the author and license information remain included in the source files.
 
 #### Credits
 
-ALF logo used in this project is not my property.  
-All rights belong to its respective creators/owners.  
-It is used here for illustrative purposes only.
+- ALF logo used in this project is not my property. All rights belong to its respective creators/owners. It is used here for illustrative purposes only.
+- Project got inspiration from [yourveganfallacyis.com](https://yourveganfallacyis.com/).
