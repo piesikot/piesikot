@@ -74,4 +74,4 @@ Oznacza to, że można dowolnie korzystać, kopiować, modyfikować i rozpowszec
 #### Uznanie autorstwa
 
 - Logo ALF użyte w tym projekcie nie jest moją własnością. Wszelkie prawa należą do jego twórców/właścicieli. Zostało ono wykorzystane wyłącznie w celach ilustracyjnych.
-- Projekty czerpie inspiracje od z [yourveganfallacyis.com](https://yourveganfallacyis.com/)
+- Projekty czerpie inspiracje z [yourveganfallacyis.com](https://yourveganfallacyis.com/)
