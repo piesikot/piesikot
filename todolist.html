@@ -77,9 +77,24 @@
         taskDeletion.addEventListener("click", function () {
           newTask.remove();
         });
+
+        // Zliczanie spacji i obsługa przypadku "same spacje"
+        const spaceCount = (taskValue.match(/ /g) || []).length;
+
         if (taskValue === "") {
-          //alert("You're a slug!")
           newTask.textContent = "Do nothing, just chill ;)";
+          newTask.appendChild(taskDeletion);
+        } else if (spaceCount === taskValue.length && taskValue.length > 0) {
+          // string składa się tylko ze spacji
+          if (spaceCount > 3) {
+            newTask.textContent = "Do spacebar press multiple times...";
+          } else if (spaceCount === 1) {
+            newTask.textContent = "Do spacebar press...";
+          } else if (spaceCount === 2) {
+            newTask.textContent = "Do spacebar press twice...";
+          } else if (spaceCount === 3) {
+            newTask.textContent = "Do spacebar press three times...";
+          }
           newTask.appendChild(taskDeletion);
         }
       });
