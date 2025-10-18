@@ -37,7 +37,7 @@ The site contains interactive elements, for example, a text-based cat hiding in 
 
 ## Projects
 
-### Todo List
+### 1. Todo List
 
 #### About the project
 
@@ -50,7 +50,7 @@ My first, very simple web project. The application allows the user to add and re
 - Vanilla JavaScript – event handling (`addEventListener`), DOM manipulation (`createElement`, `appendChild`, `remove`).
 - Responsiveness – thanks to relative units, the page adjusts to various screen resolutions.
 
-### racism.wtf
+### 2. racism.wtf
 
 #### About the Project
 
@@ -77,7 +77,7 @@ This means you are free to use, copy, modify, and distribute this code, provided
 - ALF logo used in this project is not my property. All rights belong to its respective creators/owners. It is used here for illustrative purposes only.
 - Project got inspiration from [yourveganfallacyis.com](https://yourveganfallacyis.com/).
 
-### Piesik od Pokoleń (Piesik Through Generations)
+### 3. Piesik od Pokoleń (Piesik Through Generations)
 
 #### **The site is in beta. Many things may not work correctly!**
 
