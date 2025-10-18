@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0"> <!-- Bez tego Disney's Stitch zmienia pozycje na urządzeniach mobilnych-->
     <title>Pies i kot</title>
 </head>
 <style> 
@@ -183,9 +183,7 @@
 }
 
 
-
-
-/* nie wiem, czemu nie jestem w stanie tego ustawić na buttonie, i musiałem zrobić nowego diva */
+/* Nie wiem, czemu nie jestem w stanie tego ustawić na buttonie, i musiałem zrobić nowego diva. */
 #cat-dropbtn-underline{
   position: absolute;
   display: block;
@@ -222,8 +220,6 @@
   transform-origin: top right;
 } 
 
-
-
 .project-underline{
 display: inline-block;
   position: relative;
@@ -254,16 +250,7 @@ display: inline-block;
   transform-origin: bottom;
 }
 
-
-
-
-
-
-
-
-
-
-/* Cats */
+/* Koty */
 #text-cat{
         color: black;
         font-size: 50px;       
@@ -287,9 +274,7 @@ display: inline-block;
         float: left;
     }
 
-
-
-/* correct navbar na duze ekrany */
+/* Poprawić navbar na duze ekrany */
 
 /* min-width / big-screens */
 
@@ -547,7 +532,6 @@ refractoring jednak na vw i vh?
         height: fit-content;
     }
 }
-
 </style>
 
 <body>
@@ -573,11 +557,10 @@ refractoring jednak na vw i vh?
                 </button>
                 <div id="projects-dropbtn-underline"></div>
                 <div class="projects-dropdown-content">
-                    <!-- <a href="pIestagram.html"><li id="pIestagram" class="project-underline">pIestagram</li></a> -->
                     <a href="todolist.html"><li id="todolist" class="project-underline">To do list</li></a>
-                    <!--  ../  -->
                     <a href="https://www.racism.wtf"><li id="racism" class="project-underline">Racism WTF</li></a>
                     <a href="https://piesikodpokolen.pl"><li id="piesikodpokolen" class="project-underline">Psia Farma</li></a>
+                    <!-- <a href="   "><li id="   " class="   </li></a> -->
               </div> 
             </div>
         </nav>
@@ -720,15 +703,14 @@ refractoring jednak na vw i vh?
             document.querySelector("#ot2").style.color = "black"
             document.querySelector("#ot2").style.transition = "4s"
                 
-            var audio = document.getElementById("myAudio");
+            const audio = document.getElementById("myAudio");
                            function playAudio() {
                            audio.play();
                            }
                            playAudio();
-                        //do dopracowania, żeby resetował się czas odtwarzania
-            
-                       
-//var myTimeout = setTimeout(nyanStart, 4000);
+
+//do dopracowania, żeby resetował się czas odtwarzania
+//const myTimeout = setTimeout(nyanStart, 4000);
 //jednak nie działa tak jak powinno
 
 function nyanStart() {
@@ -759,16 +741,24 @@ function nyanStart() {
 
         }
         
-        const bon = document.querySelector('#cat');
+        // Bongo Cat mouse button handling
+        document.addEventListener('mousedown', function(e) {
+            const bongo = document.getElementById('bongo');
+            if (bongo) {
+                if (e.button === 0) { // Left mouse button
+                    bongo.src = 'src/bongocat-lmb.gif';
+                } else if (e.button === 2) { // Right mouse button
+                    bongo.src = 'src/bongocat-rmb.gif';
+                }
+            }
+        });
 
-        bon.oncontextmenu = rightClick;
-  
-        function rightClick(clickEvent) {
-            clickEvent.preventDefault();
-            //bongocatDown() { return false}
-            // return false;
-            document.getElementById("bongo").src = "src/bongocat-rmb.gif"
-        }
+        document.addEventListener('contextmenu', function(e) {
+            const bongo = document.getElementById('bongo');
+            if (bongo) {
+                e.preventDefault();
+            }
+        });
 </script>
 </body>
 </html>
