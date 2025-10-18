@@ -8,7 +8,7 @@
   </head>
   <style>
     * {
-      font-family: fantasy;
+      font-family: cursive;
     }
 
     h1 {
@@ -51,7 +51,7 @@
   <body>
     <nav>
       <p class="new-task">New task:</p>
-      <input class="task" type="text" />
+      <input class="task" type="text" placeholder="Enter new task here" />
       <button class="add-task-button">Add task</button>
     </nav>
 
@@ -82,6 +82,36 @@
           newTask.textContent = "Do nothing, just chill ;)";
           newTask.appendChild(taskDeletion);
         }
+      });
+
+      // Standardowe zadanie na liście
+      const defaultTask = document.createElement("li");
+      const defaultTaskDeletion = document.createElement("span");
+      const defaultTaskText = document.createTextNode(
+        "Remove this task by clicking ->"
+      );
+
+      defaultTask.appendChild(defaultTaskText);
+      toDoList.appendChild(defaultTask);
+      defaultTaskDeletion.setAttribute("class", "task-deletion");
+      defaultTask.appendChild(defaultTaskDeletion);
+      defaultTaskDeletion.addEventListener("click", function () {
+        defaultTask.remove();
+      });
+
+      // Kolejne standardowe zadanie na liście
+      const defaultTask2 = document.createElement("li");
+      const defaultTask2Deletion = document.createElement("span");
+      const defaultTask2Text = document.createTextNode(
+        "Add your own tasks using the input in upper right corner."
+      );
+
+      defaultTask2.appendChild(defaultTask2Text);
+      toDoList.appendChild(defaultTask2);
+      defaultTask2Deletion.setAttribute("class", "task-deletion");
+      defaultTask2.appendChild(defaultTask2Deletion);
+      defaultTask2Deletion.addEventListener("click", function () {
+        defaultTask2.remove();
       });
     </script>
   </body>
