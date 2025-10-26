@@ -182,7 +182,6 @@
     rotate: 270deg;
 }
 
-
 /* Nie wiem, czemu nie jestem w stanie tego ustawić na buttonie, i musiałem zrobić nowego diva. */
 #cat-dropbtn-underline{
   position: absolute;
@@ -248,6 +247,11 @@ display: inline-block;
 .cat-underline:hover:after, .project-underline:hover::after {
   transform: scaleX(1);
   transform-origin: bottom;
+}
+
+.github-link {
+    text-decoration: none;
+    color: black;
 }
 
 /* Koty */
@@ -603,8 +607,8 @@ refractoring jednak na vw i vh?
 
     let select_invertocat = document.getElementById("invertocat");
     select_invertocat.onclick = function invertocat() {
-                document.querySelector("#cat").innerHTML = '<div id="cat"> <a href="https://github.com/piesikot" target="_blank"><img id="inverto" src="src/Invertocat.png" alt="GitHub Logo"></a></div>'
-                document.querySelector("#copyright").textContent = "Invertocat is GitHub logo used here only as social button to inform that this project integrates with GitHub."
+                document.querySelector("#cat").innerHTML = '<div id="cat"> <a href="https://github.com/piesikot" class="github-link" target="_blank"><img id="inverto" src="src/Invertocat.png" alt="GitHub Logo"></a></div>'
+                document.querySelector("#copyright").innerHTML  = '<a href="https://github.com/piesikot" target="_blank" class="github-link"> <span> Invertocat is GitHub logo used here only as social button to inform that this project integrates with GitHub. </span> </a>  '
                 document.querySelector("#copyright").style.transition = "3s"
                 //alert("Invertocat is GitHub logo used here only as social button to inform that this project integrates with GitHub." );
                 nyanInAction = false
@@ -613,7 +617,7 @@ refractoring jednak na vw i vh?
     let select_bongo_cat = document.getElementById("bongo_cat");
     select_bongo_cat.onclick = function bongo_cat() {
         document.querySelector("#cat").innerHTML = '<img id="bongo" src="src/bongocat.gif" alt="Bongo Cat" onmouseenter="piesikotEnter()" onmouseleave="piesikotLeave()" onmousedown="bongocatDown()" onmouseup="bongocatUp()" ontouchstart="bongocatDown()">';
-        document.querySelector("#copyright").textContent = "Bongo Cat created by DitzyFlama.";
+        document.querySelector("#copyright").innerHTML =  " <a href='https://bongo.cat/' target='_blank' class='github-link'>Bongo Cat created by DitzyFlama.</a> ";
         document.querySelector("#copyright").style.transition = "3s";
         nyanInAction = false;
         //alert("Bongo Cat created by DitzyFlama"  )
@@ -635,7 +639,7 @@ refractoring jednak na vw i vh?
     let select_nyan_cat = document.getElementById("nyan_cat");
     select_nyan_cat.onclick = function nyan_cat() {
         document.querySelector("#cat").innerHTML = `<img id="nyan" src="src/nyancat.gif" alt="Nyan Cat" onmouseenter="nyancatEnter()" onmouseleave="nyancatLeave()">` ;
-        document.querySelector("#copyright").textContent = "Nyan Cat created by PRguitarman."
+        document.querySelector("#copyright").innerHTML = "<a href='https://www.nyan.cat' target='_blank' class='github-link'>Nyan Cat created by PRguitarman.</a>";
         //alert("Nyan Cat created by PRguitarman." );
         //https://www.nyan.cat
     } 
