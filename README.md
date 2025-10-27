@@ -28,9 +28,9 @@ Strona zawiera interaktywne elementy, np. w postaci tekstowego kota, który ukry
 #### Uznanie autorstwa
 
 - Invertocat to logo GitHub, używane w projekcie wyłącznie jako przycisk społecznościowy, aby poinformować, że ten projekt jest zintegrowany z GitHubem.
-- Bongo Cat został utworzony przez StrayRogue.
-- Stich jest postacią z bajki wytwórni Walta Disneya.
-- Nyan Cat jest postacią, której autorem jest Christopher Torres.
+- Bongo Cat został utworzony przez DitzyFlama.
+- Stich jest postacią z bajki wytwórni Walta Disneya. Gif stworzony przez leidianenunes.
+- Nyan Cat jest postacią, której autorem jest PRguitarman.
 
 ## Projekty
 

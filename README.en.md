@@ -28,12 +28,9 @@ The site contains interactive elements, for example, a text-based cat hiding in 
 #### Credits
 
 - Invertocat is the GitHub logo, used in this project only as a social button to indicate that the project integrates with GitHub.
-
-- Bongo Cat was created by StrayRogue.
-
-- Stitch is a character from a Walt Disney cartoon.
-
-- Nyan Cat is a character created by Christopher Torres.
+- Bongo Cat was created by DitzyFlama.
+- Stitch is a character from a Walt Disney cartoon. Gif created by leidianenunes.
+- Nyan Cat is a character created by PRguitarman.
 
 ## Projects
 
