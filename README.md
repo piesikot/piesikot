@@ -68,8 +68,8 @@ Strona jest dostępna live pod adresem: [https://racism.wtf](https://racism.wtf)
 
 #### Licencja
 
-Projekt udostępniany jest na licencji MIT.  
-Oznacza to, że można dowolnie korzystać, kopiować, modyfikować i rozpowszechniać ten kod, pod warunkiem zachowania informacji o autorze i licencji w plikach źródłowych.
+Projekt udostępniany jest na licencji Creative Commons Uznanie autorstwa–Użycie niekomercyjne–Na tych samych warunkach 4.0 Międzynarodowa (`CC BY-NC-SA 4.0`).  
+Można udostępniać (kopiować i rozpowszechniać materiał w dowolnym medium lub formacie) oraz adaptować (remiksować, przekształcać i tworzyć na jego podstawie) na poniższych warunkach: **Uznanie autorstwa** (należy podać stosowne uznanie), **Użycie niekomercyjne** (nie można używać materiału w celach komercyjnych) oraz **Na tych samych warunkach** (jeśli remiksujesz, przekształcasz lub tworzysz na jego podstawie, musisz rozpowszechniać swoje wkłady na tej samej licencji). Pełny tekst licencji znajduje się w pliku `LICENSE` lub pod adresem https://creativecommons.org/licenses/by-nc-sa/4.0/.
 
 #### Uznanie autorstwa
 

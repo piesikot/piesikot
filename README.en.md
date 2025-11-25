@@ -105,7 +105,8 @@ Because this is a website for a Polish farm, it is available only in Polish. How
 #### 📜 License
 
 This project is distributed under a **proprietary license**.  
-⚠️ **The author reserves that the code may be copied, modified, and shared only for purposes aligned with the [project mission](https://piesikodpokolen.pl/mission.html).**  
+⚠️ The author reserves that the code may be copied, modified, and distributed only with the author’s consent, and solely for purposes aligned with the [project mission](https://piesikodpokolen.pl/mission.html).
+
 Any other use is strictly prohibited.
 
 ---
