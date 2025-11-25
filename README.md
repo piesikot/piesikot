@@ -100,8 +100,9 @@ Ze względu na to, iż jest to strona polskiego gospodarstwa, występuje ona wy�
 
 #### 📜 Licencja
 
-Projekt udostępniany jest na licencji MIT.  
-⚠️**Jednakże autor zastrzega, że kod przeznaczony jest wyłącznie w celach związanych z [misją](https://piesikodpokolen.pl/mission.html) projektu!**
+Projekt udostępniany jest na licencji **własnej (proprietary license)**.  
+⚠️ **Autor zastrzega, że kod może być kopiowany, modyfikowany i rozpowszechniany wyłącznie w celach zgodnych z [misją projektu](https://piesikodpokolen.pl/misja.html).**  
+Wszelkie inne wykorzystanie jest zabronione.
 
 #### Uznanie autorstwa
 
