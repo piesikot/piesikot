@@ -66,8 +66,10 @@ The site is available live at: [https://racism.wtf](https://racism.wtf)
 
 #### License
 
-This project is released under the MIT License.  
-This means you are free to use, copy, modify, and distribute this code, provided that the author and license information remain included in the source files.
+This project is distributed under a **proprietary license**.  
+⚠️ The author reserves that the code may be copied, modified, and distributed only with the author’s consent, and solely for purposes aligned with the [project mission](https://piesikodpokolen.pl/mission.html).
+
+Any other use is strictly prohibited.
 
 #### Credits
 

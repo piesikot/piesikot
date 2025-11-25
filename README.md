@@ -100,8 +100,10 @@ Ze względu na to, iż jest to strona polskiego gospodarstwa, występuje ona wy�
 
 #### 📜 Licencja
 
-Projekt udostępniany jest na licencji **własnej (proprietary license)**.  
-⚠️ **Autor zastrzega, że kod może być kopiowany, modyfikowany i rozpowszechniany wyłącznie w celach zgodnych z [misją projektu](https://piesikodpokolen.pl/misja.html).**  
+Projekt udostępniany jest na licencji **własnej (proprietary license)**.
+
+⚠️ Autor zastrzega, że kod może być kopiowany, modyfikowany i rozpowszechniany wyłącznie po uzyskaniu zgody autora, wyłącznie w celach zgodnych z [misją projektu](https://piesikodpokolen.pl/misja.html).
+
 Wszelkie inne wykorzystanie jest zabronione.
 
 #### Uznanie autorstwa
